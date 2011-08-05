@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="1" failures="0" hostname="CCHL-829706a" id="0" name="ActivityTests" package="com.summitbid.coach" tests="1" time="0.671" timestamp="2011-08-04T18:38:38">
+  <testsuite errors="1" failures="0" hostname="CCHL-829706a" id="0" name="ActivityTests" package="com.summitbid.coach" tests="1" time="0.489" timestamp="2011-08-05T06:12:17">
       <properties />
 
-      <testcase classname="com.summitbid.coach.ActivityTests" name="testSomething" time="0.569">
+      <testcase classname="com.summitbid.coach.ActivityTests" name="testSomething" time="0.415">
           <error message="Error creating bean with name &apos;com.summitbid.coach.Activity&apos;: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.summitbid.coach.Activity]: Is it an abstract class?; nested exception is java.lang.InstantiationException" type="org.springframework.beans.factory.BeanCreationException">org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;com.summitbid.coach.Activity&apos;: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.summitbid.coach.Activity]: Is it an abstract class?; nested exception is java.lang.InstantiationException
 	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:151)
 	at grails.test.mixin.domain.DomainClassUnitTestMixin.mockDomain(DomainClassUnitTestMixin.groovy:108)
@@ -20,10 +20,10 @@ Caused by: java.lang.InstantiationException
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="CCHL-829706a" id="1" name="ExerciseTests" package="com.summitbid.coach" tests="1" time="0.659" timestamp="2011-08-04T18:38:38">
+  <testsuite errors="0" failures="0" hostname="CCHL-829706a" id="1" name="ExerciseTests" package="com.summitbid.coach" tests="1" time="0.445" timestamp="2011-08-05T06:12:17">
       <properties />
 
-      <testcase classname="com.summitbid.coach.ExerciseTests" name="testSomething" time="0.256" />
+      <testcase classname="com.summitbid.coach.ExerciseTests" name="testSomething" time="0.157" />
 
       <system-out><![CDATA[--Output from testSomething--
 ]]></system-out>
@@ -32,10 +32,10 @@ Caused by: java.lang.InstantiationException
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="8" failures="0" hostname="CCHL-829706a" id="2" name="FoodControllerTests" package="com.summitbid.coach" tests="8" time="2.717" timestamp="2011-08-04T18:38:39">
+  <testsuite errors="8" failures="0" hostname="CCHL-829706a" id="2" name="FoodControllerTests" package="com.summitbid.coach" tests="8" time="1.433" timestamp="2011-08-05T06:12:18">
       <properties />
 
-      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testIndex" time="1.833">
+      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testIndex" time="0.887">
           <error message="No signature of method: com.summitbid.coach.FoodController.index() is applicable for argument types: () values: []&#xa;Possible solutions: render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map), render(org.codehaus.groovy.grails.web.converters.Converter), find(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.index() is applicable for argument types: () values: []
 Possible solutions: render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map), render(org.codehaus.groovy.grails.web.converters.Converter), find(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
@@ -44,16 +44,16 @@ Possible solutions: render(groovy.lang.Closure), render(java.lang.Object), rende
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testList" time="0.135">
-          <error message="No signature of method: com.summitbid.coach.FoodController.list() is applicable for argument types: () values: []&#xa;Possible solutions: is(java.lang.Object), wait(), wait(long), print(java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.list() is applicable for argument types: () values: []
-Possible solutions: is(java.lang.Object), wait(), wait(long), print(java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;)
+      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testList" time="0.094">
+          <error message="No signature of method: com.summitbid.coach.FoodController.list() is applicable for argument types: () values: []&#xa;Possible solutions: is(java.lang.Object), wait(), wait(long), use([Ljava.lang.Object;), print(java.lang.Object), split(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.list() is applicable for argument types: () values: []
+Possible solutions: is(java.lang.Object), wait(), wait(long), use([Ljava.lang.Object;), print(java.lang.Object), split(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.FoodControllerTests.testList(FoodControllerTests.groovy:20)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testCreate" time="0.145">
+      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testCreate" time="0.108">
           <error message="No signature of method: com.summitbid.coach.FoodController.create() is applicable for argument types: () values: []&#xa;Possible solutions: chain(java.util.Map), render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map), render(org.codehaus.groovy.grails.web.converters.Converter)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.create() is applicable for argument types: () values: []
 Possible solutions: chain(java.util.Map), render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map), render(org.codehaus.groovy.grails.web.converters.Converter)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
@@ -62,45 +62,45 @@ Possible solutions: chain(java.util.Map), render(groovy.lang.Closure), render(ja
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testSave" time="0.099">
-          <error message="No signature of method: com.summitbid.coach.FoodController.save() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), any(), wait(long), each(groovy.lang.Closure), use([Ljava.lang.Object;), sleep(long)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.save() is applicable for argument types: () values: []
-Possible solutions: wait(), any(), wait(long), each(groovy.lang.Closure), use([Ljava.lang.Object;), sleep(long)
+      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testSave" time="0.047">
+          <error message="No signature of method: com.summitbid.coach.FoodController.save() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), any(), wait(long), any(groovy.lang.Closure), use([Ljava.lang.Object;), each(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.save() is applicable for argument types: () values: []
+Possible solutions: wait(), any(), wait(long), any(groovy.lang.Closure), use([Ljava.lang.Object;), each(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.FoodControllerTests.testSave(FoodControllerTests.groovy:33)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testShow" time="0.074">
-          <error message="No signature of method: com.summitbid.coach.FoodController.show() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), dump(), any(), wait(long), chain(java.util.Map), is(java.lang.Object)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.show() is applicable for argument types: () values: []
-Possible solutions: wait(), dump(), any(), wait(long), chain(java.util.Map), is(java.lang.Object)
+      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testShow" time="0.039">
+          <error message="No signature of method: com.summitbid.coach.FoodController.show() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), any(), dump(), wait(long), chain(java.util.Map), grep(java.lang.Object)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.show() is applicable for argument types: () values: []
+Possible solutions: wait(), any(), dump(), wait(long), chain(java.util.Map), grep(java.lang.Object)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.FoodControllerTests.testShow(FoodControllerTests.groovy:55)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testEdit" time="0.201">
-          <error message="No signature of method: com.summitbid.coach.FoodController.edit() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), wait(long), wait(long, int), is(java.lang.Object), print(java.lang.Object), each(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.edit() is applicable for argument types: () values: []
-Possible solutions: wait(), wait(long), wait(long, int), is(java.lang.Object), print(java.lang.Object), each(groovy.lang.Closure)
+      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testEdit" time="0.038">
+          <error message="No signature of method: com.summitbid.coach.FoodController.edit() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), wait(long), wait(long, int), getAt(java.lang.String), print(java.lang.Object), split(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.edit() is applicable for argument types: () values: []
+Possible solutions: wait(), wait(long), wait(long, int), getAt(java.lang.String), print(java.lang.Object), split(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.FoodControllerTests.testEdit(FoodControllerTests.groovy:75)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testUpdate" time="0.13">
-          <error message="No signature of method: com.summitbid.coach.FoodController.update() is applicable for argument types: () values: []&#xa;Possible solutions: putAt(java.lang.String, java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;), isCase(java.lang.Object), use(java.lang.Class, groovy.lang.Closure), use(java.util.List, groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.update() is applicable for argument types: () values: []
-Possible solutions: putAt(java.lang.String, java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;), isCase(java.lang.Object), use(java.lang.Class, groovy.lang.Closure), use(java.util.List, groovy.lang.Closure)
+      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testUpdate" time="0.146">
+          <error message="No signature of method: com.summitbid.coach.FoodController.update() is applicable for argument types: () values: []&#xa;Possible solutions: putAt(java.lang.String, java.lang.Object), use([Ljava.lang.Object;), split(groovy.lang.Closure), isCase(java.lang.Object), use(java.util.List, groovy.lang.Closure), use(java.lang.Class, groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.update() is applicable for argument types: () values: []
+Possible solutions: putAt(java.lang.String, java.lang.Object), use([Ljava.lang.Object;), split(groovy.lang.Closure), isCase(java.lang.Object), use(java.util.List, groovy.lang.Closure), use(java.lang.Class, groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.FoodControllerTests.testUpdate(FoodControllerTests.groovy:96)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testDelete" time="0.055">
-          <error message="No signature of method: com.summitbid.coach.FoodController.delete() is applicable for argument types: () values: []&#xa;Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), every(groovy.lang.Closure), split(groovy.lang.Closure), getAt(java.lang.String)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.delete() is applicable for argument types: () values: []
-Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), every(groovy.lang.Closure), split(groovy.lang.Closure), getAt(java.lang.String)
+      <testcase classname="com.summitbid.coach.FoodControllerTests" name="testDelete" time="0.045">
+          <error message="No signature of method: com.summitbid.coach.FoodController.delete() is applicable for argument types: () values: []&#xa;Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), getAt(java.lang.String), every(groovy.lang.Closure), split(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.FoodController.delete() is applicable for argument types: () values: []
+Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), getAt(java.lang.String), every(groovy.lang.Closure), split(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.FoodControllerTests.testDelete(FoodControllerTests.groovy:133)
 </error>
@@ -128,10 +128,10 @@ Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), ever
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="CCHL-829706a" id="3" name="FoodTests" package="com.summitbid.coach" tests="1" time="0.086" timestamp="2011-08-04T18:38:42">
+  <testsuite errors="0" failures="0" hostname="CCHL-829706a" id="3" name="FoodTests" package="com.summitbid.coach" tests="1" time="0.058" timestamp="2011-08-05T06:12:19">
       <properties />
 
-      <testcase classname="com.summitbid.coach.FoodTests" name="testSomething" time="0.032" />
+      <testcase classname="com.summitbid.coach.FoodTests" name="testSomething" time="0.019" />
 
       <system-out><![CDATA[--Output from testSomething--
 ]]></system-out>
@@ -140,10 +140,10 @@ Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), ever
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="8" failures="0" hostname="CCHL-829706a" id="4" name="MealControllerTests" package="com.summitbid.coach" tests="8" time="0.52" timestamp="2011-08-04T18:38:42">
+  <testsuite errors="8" failures="0" hostname="CCHL-829706a" id="4" name="MealControllerTests" package="com.summitbid.coach" tests="8" time="0.36" timestamp="2011-08-05T06:12:19">
       <properties />
 
-      <testcase classname="com.summitbid.coach.MealControllerTests" name="testIndex" time="0.128">
+      <testcase classname="com.summitbid.coach.MealControllerTests" name="testIndex" time="0.097">
           <error message="No signature of method: com.summitbid.coach.MealController.index() is applicable for argument types: () values: []&#xa;Possible solutions: render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map), render(org.codehaus.groovy.grails.web.converters.Converter), find(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.index() is applicable for argument types: () values: []
 Possible solutions: render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map), render(org.codehaus.groovy.grails.web.converters.Converter), find(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
@@ -152,16 +152,16 @@ Possible solutions: render(groovy.lang.Closure), render(java.lang.Object), rende
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.MealControllerTests" name="testList" time="0.046">
-          <error message="No signature of method: com.summitbid.coach.MealController.list() is applicable for argument types: () values: []&#xa;Possible solutions: is(java.lang.Object), wait(), wait(long), print(java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.list() is applicable for argument types: () values: []
-Possible solutions: is(java.lang.Object), wait(), wait(long), print(java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;)
+      <testcase classname="com.summitbid.coach.MealControllerTests" name="testList" time="0.037">
+          <error message="No signature of method: com.summitbid.coach.MealController.list() is applicable for argument types: () values: []&#xa;Possible solutions: is(java.lang.Object), wait(), wait(long), use([Ljava.lang.Object;), print(java.lang.Object), split(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.list() is applicable for argument types: () values: []
+Possible solutions: is(java.lang.Object), wait(), wait(long), use([Ljava.lang.Object;), print(java.lang.Object), split(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.MealControllerTests.testList(MealControllerTests.groovy:20)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.MealControllerTests" name="testCreate" time="0.062">
+      <testcase classname="com.summitbid.coach.MealControllerTests" name="testCreate" time="0.034">
           <error message="No signature of method: com.summitbid.coach.MealController.create() is applicable for argument types: () values: []&#xa;Possible solutions: chain(java.util.Map), render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map), render(org.codehaus.groovy.grails.web.converters.Converter)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.create() is applicable for argument types: () values: []
 Possible solutions: chain(java.util.Map), render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map), render(org.codehaus.groovy.grails.web.converters.Converter)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
@@ -170,45 +170,45 @@ Possible solutions: chain(java.util.Map), render(groovy.lang.Closure), render(ja
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.MealControllerTests" name="testSave" time="0.051">
-          <error message="No signature of method: com.summitbid.coach.MealController.save() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), any(), wait(long), each(groovy.lang.Closure), use([Ljava.lang.Object;), sleep(long)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.save() is applicable for argument types: () values: []
-Possible solutions: wait(), any(), wait(long), each(groovy.lang.Closure), use([Ljava.lang.Object;), sleep(long)
+      <testcase classname="com.summitbid.coach.MealControllerTests" name="testSave" time="0.024">
+          <error message="No signature of method: com.summitbid.coach.MealController.save() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), any(), wait(long), any(groovy.lang.Closure), use([Ljava.lang.Object;), each(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.save() is applicable for argument types: () values: []
+Possible solutions: wait(), any(), wait(long), any(groovy.lang.Closure), use([Ljava.lang.Object;), each(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.MealControllerTests.testSave(MealControllerTests.groovy:33)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.MealControllerTests" name="testShow" time="0.052">
-          <error message="No signature of method: com.summitbid.coach.MealController.show() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), dump(), any(), wait(long), chain(java.util.Map), is(java.lang.Object)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.show() is applicable for argument types: () values: []
-Possible solutions: wait(), dump(), any(), wait(long), chain(java.util.Map), is(java.lang.Object)
+      <testcase classname="com.summitbid.coach.MealControllerTests" name="testShow" time="0.027">
+          <error message="No signature of method: com.summitbid.coach.MealController.show() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), any(), dump(), wait(long), chain(java.util.Map), grep(java.lang.Object)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.show() is applicable for argument types: () values: []
+Possible solutions: wait(), any(), dump(), wait(long), chain(java.util.Map), grep(java.lang.Object)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.MealControllerTests.testShow(MealControllerTests.groovy:55)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.MealControllerTests" name="testEdit" time="0.041">
-          <error message="No signature of method: com.summitbid.coach.MealController.edit() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), wait(long), wait(long, int), is(java.lang.Object), print(java.lang.Object), each(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.edit() is applicable for argument types: () values: []
-Possible solutions: wait(), wait(long), wait(long, int), is(java.lang.Object), print(java.lang.Object), each(groovy.lang.Closure)
+      <testcase classname="com.summitbid.coach.MealControllerTests" name="testEdit" time="0.048">
+          <error message="No signature of method: com.summitbid.coach.MealController.edit() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), wait(long), wait(long, int), getAt(java.lang.String), print(java.lang.Object), split(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.edit() is applicable for argument types: () values: []
+Possible solutions: wait(), wait(long), wait(long, int), getAt(java.lang.String), print(java.lang.Object), split(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.MealControllerTests.testEdit(MealControllerTests.groovy:75)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.MealControllerTests" name="testUpdate" time="0.049">
-          <error message="No signature of method: com.summitbid.coach.MealController.update() is applicable for argument types: () values: []&#xa;Possible solutions: putAt(java.lang.String, java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;), isCase(java.lang.Object), use(java.lang.Class, groovy.lang.Closure), use(java.util.List, groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.update() is applicable for argument types: () values: []
-Possible solutions: putAt(java.lang.String, java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;), isCase(java.lang.Object), use(java.lang.Class, groovy.lang.Closure), use(java.util.List, groovy.lang.Closure)
+      <testcase classname="com.summitbid.coach.MealControllerTests" name="testUpdate" time="0.033">
+          <error message="No signature of method: com.summitbid.coach.MealController.update() is applicable for argument types: () values: []&#xa;Possible solutions: putAt(java.lang.String, java.lang.Object), use([Ljava.lang.Object;), split(groovy.lang.Closure), isCase(java.lang.Object), use(java.util.List, groovy.lang.Closure), use(java.lang.Class, groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.update() is applicable for argument types: () values: []
+Possible solutions: putAt(java.lang.String, java.lang.Object), use([Ljava.lang.Object;), split(groovy.lang.Closure), isCase(java.lang.Object), use(java.util.List, groovy.lang.Closure), use(java.lang.Class, groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.MealControllerTests.testUpdate(MealControllerTests.groovy:96)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.MealControllerTests" name="testDelete" time="0.047">
-          <error message="No signature of method: com.summitbid.coach.MealController.delete() is applicable for argument types: () values: []&#xa;Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), every(groovy.lang.Closure), split(groovy.lang.Closure), getAt(java.lang.String)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.delete() is applicable for argument types: () values: []
-Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), every(groovy.lang.Closure), split(groovy.lang.Closure), getAt(java.lang.String)
+      <testcase classname="com.summitbid.coach.MealControllerTests" name="testDelete" time="0.031">
+          <error message="No signature of method: com.summitbid.coach.MealController.delete() is applicable for argument types: () values: []&#xa;Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), getAt(java.lang.String), every(groovy.lang.Closure), split(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.MealController.delete() is applicable for argument types: () values: []
+Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), getAt(java.lang.String), every(groovy.lang.Closure), split(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.MealControllerTests.testDelete(MealControllerTests.groovy:133)
 </error>
@@ -236,10 +236,10 @@ Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), ever
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="CCHL-829706a" id="5" name="MealTests" package="com.summitbid.coach" tests="1" time="0.064" timestamp="2011-08-04T18:38:43">
+  <testsuite errors="0" failures="0" hostname="CCHL-829706a" id="5" name="MealTests" package="com.summitbid.coach" tests="1" time="0.054" timestamp="2011-08-05T06:12:20">
       <properties />
 
-      <testcase classname="com.summitbid.coach.MealTests" name="testSomething" time="0.017" />
+      <testcase classname="com.summitbid.coach.MealTests" name="testSomething" time="0.019" />
 
       <system-out><![CDATA[--Output from testSomething--
 ]]></system-out>
@@ -248,10 +248,10 @@ Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), ever
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="8" failures="0" hostname="CCHL-829706a" id="6" name="WorkoutControllerTests" package="com.summitbid.coach" tests="8" time="0.439" timestamp="2011-08-04T18:38:43">
+  <testsuite errors="8" failures="0" hostname="CCHL-829706a" id="6" name="WorkoutControllerTests" package="com.summitbid.coach" tests="8" time="0.271" timestamp="2011-08-05T06:12:20">
       <properties />
 
-      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testIndex" time="0.119">
+      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testIndex" time="0.065">
           <error message="No signature of method: com.summitbid.coach.WorkoutController.index() is applicable for argument types: () values: []&#xa;Possible solutions: render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map), render(org.codehaus.groovy.grails.web.converters.Converter), find(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.index() is applicable for argument types: () values: []
 Possible solutions: render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map), render(org.codehaus.groovy.grails.web.converters.Converter), find(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
@@ -260,16 +260,16 @@ Possible solutions: render(groovy.lang.Closure), render(java.lang.Object), rende
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testList" time="0.045">
-          <error message="No signature of method: com.summitbid.coach.WorkoutController.list() is applicable for argument types: () values: []&#xa;Possible solutions: is(java.lang.Object), wait(), wait(long), print(java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.list() is applicable for argument types: () values: []
-Possible solutions: is(java.lang.Object), wait(), wait(long), print(java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;)
+      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testList" time="0.023">
+          <error message="No signature of method: com.summitbid.coach.WorkoutController.list() is applicable for argument types: () values: []&#xa;Possible solutions: is(java.lang.Object), wait(), wait(long), use([Ljava.lang.Object;), print(java.lang.Object), split(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.list() is applicable for argument types: () values: []
+Possible solutions: is(java.lang.Object), wait(), wait(long), use([Ljava.lang.Object;), print(java.lang.Object), split(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.WorkoutControllerTests.testList(WorkoutControllerTests.groovy:20)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testCreate" time="0.039">
+      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testCreate" time="0.043">
           <error message="No signature of method: com.summitbid.coach.WorkoutController.create() is applicable for argument types: () values: []&#xa;Possible solutions: chain(java.util.Map), render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map), render(org.codehaus.groovy.grails.web.converters.Converter)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.create() is applicable for argument types: () values: []
 Possible solutions: chain(java.util.Map), render(groovy.lang.Closure), render(java.lang.Object), render(java.lang.String), render(java.util.Map), render(org.codehaus.groovy.grails.web.converters.Converter)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
@@ -278,45 +278,45 @@ Possible solutions: chain(java.util.Map), render(groovy.lang.Closure), render(ja
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testSave" time="0.064">
-          <error message="No signature of method: com.summitbid.coach.WorkoutController.save() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), any(), wait(long), each(groovy.lang.Closure), use([Ljava.lang.Object;), sleep(long)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.save() is applicable for argument types: () values: []
-Possible solutions: wait(), any(), wait(long), each(groovy.lang.Closure), use([Ljava.lang.Object;), sleep(long)
+      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testSave" time="0.023">
+          <error message="No signature of method: com.summitbid.coach.WorkoutController.save() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), any(), wait(long), any(groovy.lang.Closure), use([Ljava.lang.Object;), each(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.save() is applicable for argument types: () values: []
+Possible solutions: wait(), any(), wait(long), any(groovy.lang.Closure), use([Ljava.lang.Object;), each(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.WorkoutControllerTests.testSave(WorkoutControllerTests.groovy:33)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testShow" time="0.031">
-          <error message="No signature of method: com.summitbid.coach.WorkoutController.show() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), dump(), any(), wait(long), chain(java.util.Map), is(java.lang.Object)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.show() is applicable for argument types: () values: []
-Possible solutions: wait(), dump(), any(), wait(long), chain(java.util.Map), is(java.lang.Object)
+      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testShow" time="0.033">
+          <error message="No signature of method: com.summitbid.coach.WorkoutController.show() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), any(), dump(), wait(long), chain(java.util.Map), grep(java.lang.Object)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.show() is applicable for argument types: () values: []
+Possible solutions: wait(), any(), dump(), wait(long), chain(java.util.Map), grep(java.lang.Object)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.WorkoutControllerTests.testShow(WorkoutControllerTests.groovy:55)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testEdit" time="0.032">
-          <error message="No signature of method: com.summitbid.coach.WorkoutController.edit() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), wait(long), wait(long, int), is(java.lang.Object), print(java.lang.Object), each(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.edit() is applicable for argument types: () values: []
-Possible solutions: wait(), wait(long), wait(long, int), is(java.lang.Object), print(java.lang.Object), each(groovy.lang.Closure)
+      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testEdit" time="0.023">
+          <error message="No signature of method: com.summitbid.coach.WorkoutController.edit() is applicable for argument types: () values: []&#xa;Possible solutions: wait(), wait(long), wait(long, int), getAt(java.lang.String), print(java.lang.Object), split(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.edit() is applicable for argument types: () values: []
+Possible solutions: wait(), wait(long), wait(long, int), getAt(java.lang.String), print(java.lang.Object), split(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.WorkoutControllerTests.testEdit(WorkoutControllerTests.groovy:75)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testUpdate" time="0.035">
-          <error message="No signature of method: com.summitbid.coach.WorkoutController.update() is applicable for argument types: () values: []&#xa;Possible solutions: putAt(java.lang.String, java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;), isCase(java.lang.Object), use(java.lang.Class, groovy.lang.Closure), use(java.util.List, groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.update() is applicable for argument types: () values: []
-Possible solutions: putAt(java.lang.String, java.lang.Object), split(groovy.lang.Closure), use([Ljava.lang.Object;), isCase(java.lang.Object), use(java.lang.Class, groovy.lang.Closure), use(java.util.List, groovy.lang.Closure)
+      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testUpdate" time="0.019">
+          <error message="No signature of method: com.summitbid.coach.WorkoutController.update() is applicable for argument types: () values: []&#xa;Possible solutions: putAt(java.lang.String, java.lang.Object), use([Ljava.lang.Object;), split(groovy.lang.Closure), isCase(java.lang.Object), use(java.util.List, groovy.lang.Closure), use(java.lang.Class, groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.update() is applicable for argument types: () values: []
+Possible solutions: putAt(java.lang.String, java.lang.Object), use([Ljava.lang.Object;), split(groovy.lang.Closure), isCase(java.lang.Object), use(java.util.List, groovy.lang.Closure), use(java.lang.Class, groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.WorkoutControllerTests.testUpdate(WorkoutControllerTests.groovy:96)
 </error>
 
       </testcase>
 
-      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testDelete" time="0.031">
-          <error message="No signature of method: com.summitbid.coach.WorkoutController.delete() is applicable for argument types: () values: []&#xa;Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), every(groovy.lang.Closure), split(groovy.lang.Closure), getAt(java.lang.String)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.delete() is applicable for argument types: () values: []
-Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), every(groovy.lang.Closure), split(groovy.lang.Closure), getAt(java.lang.String)
+      <testcase classname="com.summitbid.coach.WorkoutControllerTests" name="testDelete" time="0.019">
+          <error message="No signature of method: com.summitbid.coach.WorkoutController.delete() is applicable for argument types: () values: []&#xa;Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), getAt(java.lang.String), every(groovy.lang.Closure), split(groovy.lang.Closure)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: com.summitbid.coach.WorkoutController.delete() is applicable for argument types: () values: []
+Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), getAt(java.lang.String), every(groovy.lang.Closure), split(groovy.lang.Closure)
 	at grails.test.mixin.web.ControllerUnitTestMixin$_mockController_closure4.doCall(ControllerUnitTestMixin.groovy:299)
 	at com.summitbid.coach.WorkoutControllerTests.testDelete(WorkoutControllerTests.groovy:133)
 </error>
@@ -344,10 +344,10 @@ Possible solutions: sleep(long), sleep(long, groovy.lang.Closure), every(), ever
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="CCHL-829706a" id="7" name="WorkoutTests" package="com.summitbid.coach" tests="1" time="0.021" timestamp="2011-08-04T18:38:43">
+  <testsuite errors="0" failures="0" hostname="CCHL-829706a" id="7" name="WorkoutTests" package="com.summitbid.coach" tests="1" time="0.016" timestamp="2011-08-05T06:12:20">
       <properties />
 
-      <testcase classname="com.summitbid.coach.WorkoutTests" name="testSomething" time="0.017" />
+      <testcase classname="com.summitbid.coach.WorkoutTests" name="testSomething" time="0.013" />
 
       <system-out><![CDATA[--Output from testSomething--
 ]]></system-out>
