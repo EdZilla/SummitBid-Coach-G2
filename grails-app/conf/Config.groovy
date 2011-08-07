@@ -64,6 +64,7 @@ environments {
     production {
         grails.logging.jul.usebridge = false
         grails.serverURL = "http://www.changeme.com"
+		
     }
 }
 
@@ -75,6 +76,24 @@ log4j = {
     //appenders {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
+	
+	
+		appenders {
+			  file name: 'file', file: '/opt/data/logs/coachg2/coachg2.log'
+						  file name: 'stacktrace', file: '/opt/data/logs/coachg2/coachg2.log'
+		}
+
+		root   {
+		   error  'file', 'stdout'
+		   additivity = true
+		}
+
+		// Set level for all application artefacts
+		  // info "grails.app"
+		  // Set for a specific controller
+    trace "grails.app.controller"
+    trace "grails.app.domain"
+    trace "grails.app.service"
 
     error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
            'org.codehaus.groovy.grails.web.pages', //  GSP
