@@ -14,7 +14,7 @@ environments {
     development {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:h2:mem:devDb"
+            url = "jdbc:h2:mem:/opt/data/db/coachg2/devDb"
         }
     }
     test {
@@ -26,7 +26,7 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:h2:prodDb"
+            url = "jdbc:h2:/opt/data/db/coachg2/prodDb"
         }
     }
 }
