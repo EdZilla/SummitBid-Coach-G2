@@ -12,6 +12,8 @@ import org.junit.*
 class FoodTests {
 
     void testSomething() {
-
+		def nut = new NutritionData()
+		assert !nut
+		assert false
     }
 }

@@ -1,6 +1,5 @@
 package com.summitbid.coach
 
-class NutritionInfoController {
-
+class NutritionDataController {
     static scaffold = true
 }
