@@ -25,7 +25,8 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "update"
+            //dbCreate = "update"
+			dbCreate = "create-drop"
             url = "jdbc:h2:/opt/data/db/coachg2/prodDb"
         }
     }
