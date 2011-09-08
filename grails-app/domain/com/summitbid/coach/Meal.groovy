@@ -10,4 +10,9 @@ class Meal {
 		name(nullable:false)
 		description(nullable:true)
     }
+	
+	String toString()
+	{
+		return "food: ${name}, ${description}"
+	}
 }

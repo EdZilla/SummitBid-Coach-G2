@@ -12,4 +12,9 @@ class Food {
 		description(nullable:true)
 		//nutritionData(nullable:false)
     }
+	
+	String toString()
+	{
+		return "food: ${name}, ${description}"
+	}
 }
