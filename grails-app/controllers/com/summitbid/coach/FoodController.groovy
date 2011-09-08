@@ -4,6 +4,7 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class FoodController {
 	static scaffold = true
+	static navigation = true
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
