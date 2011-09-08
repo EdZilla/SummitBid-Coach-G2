@@ -10,7 +10,7 @@ class Food {
     static constraints = {
 		name(nullable:false)
 		description(nullable:true)
-		//nutritionData(nullable:false)
+		nutritionData(nullable:true)
     }
 	
 	String toString()
