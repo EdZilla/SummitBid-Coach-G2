@@ -9,5 +9,6 @@ class NutritionData {
     static constraints = {
 		calories(nullable:true)
 		gramsFat(nullable:true)
+		food(nullable:true)
     }
 }
