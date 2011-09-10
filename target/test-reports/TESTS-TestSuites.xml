@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="CCHL-829706a" id="0" name="FoodTests" package="com.summitbid.coach" tests="1" time="0.042" timestamp="2011-09-06T11:54:16">
+  <testsuite errors="1" failures="0" hostname="CCHL-829706a" id="0" name="FoodTests" package="com.summitbid.coach" tests="4" time="1.053" timestamp="2011-09-10T05:41:30">
       <properties />
 
-      <testcase classname="com.summitbid.coach.FoodTests" name="testSomething" time="0.042" />
+      <testcase classname="com.summitbid.coach.FoodTests" name="testConstraints" time="0.84">
+          <error message="No such property: name for class: org.springframework.validation.BeanPropertyBindingResult" type="groovy.lang.MissingPropertyException">groovy.lang.MissingPropertyException: No such property: name for class: org.springframework.validation.BeanPropertyBindingResult
+	at com.summitbid.coach.FoodTests.testConstraints(FoodTests.groovy:25)
+</error>
 
-      <system-out><![CDATA[--Output from testSomething--
+      </testcase>
+
+      <testcase classname="com.summitbid.coach.FoodTests" name="testConstraintsFood" time="0.084" />
+
+      <testcase classname="com.summitbid.coach.FoodTests" name="testConstraintsFoodNoNutritionData" time="0.049" />
+
+      <testcase classname="com.summitbid.coach.FoodTests" name="testConstraintsNutritionDataNoFood" time="0.045" />
+
+      <system-out><![CDATA[--Output from testConstraints--
+testConstraints enter
+--Output from testConstraintsFood--
+ERRORS: Field error in object 'com.summitbid.coach.Food' on field 'name': rejected value [null]; codes [com.summitbid.coach.Food.name.nullable.error.com.summitbid.coach.Food.name,com.summitbid.coach.Food.name.nullable.error.name,com.summitbid.coach.Food.name.nullable.error.java.lang.String,com.summitbid.coach.Food.name.nullable.error,food.name.nullable.error.com.summitbid.coach.Food.name,food.name.nullable.error.name,food.name.nullable.error.java.lang.String,food.name.nullable.error,com.summitbid.coach.Food.name.nullable.com.summitbid.coach.Food.name,com.summitbid.coach.Food.name.nullable.name,com.summitbid.coach.Food.name.nullable.java.lang.String,com.summitbid.coach.Food.name.nullable,food.name.nullable.com.summitbid.coach.Food.name,food.name.nullable.name,food.name.nullable.java.lang.String,food.name.nullable,nullable.com.summitbid.coach.Food.name,nullable.name,nullable.java.lang.String,nullable]; arguments [name,class com.summitbid.coach.Food]; default message [Property [{0}] of class [{1}] cannot be null] : END
+--Output from testConstraintsFoodNoNutritionData--
+--Output from testConstraintsNutritionDataNoFood--
 ]]></system-out>
 
-      <system-err><![CDATA[--Output from testSomething--
+      <system-err><![CDATA[--Output from testConstraints--
+--Output from testConstraintsFood--
+--Output from testConstraintsFoodNoNutritionData--
+--Output from testConstraintsNutritionDataNoFood--
 ]]></system-err>
 
   </testsuite>

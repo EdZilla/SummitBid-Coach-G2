@@ -57,7 +57,7 @@
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${mealInstance?.id}" />
 					<g:link class="edit" action="edit" id="${mealInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:link controller="food" class="edit" action="create" >Create New Food</g:link>
+					<g:link controller="food" class="edit" action="create" >Add a food Item</g:link>
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
