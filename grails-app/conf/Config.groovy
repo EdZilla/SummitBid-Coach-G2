@@ -80,8 +80,8 @@ log4j = {
 	
 	
 		appenders {
-			  file name: 'file', file: '/opt/data/logs/coachg2/coachg2.log'
-						  file name: 'stacktrace', file: '/opt/data/logs/coachg2/coachg2.log'
+			file name: 'file', file: '/opt/data/logs/coachg2/coachg2.log'
+			file name: 'stacktrace', file: '/opt/data/logs/coachg2/coachg2stacktrace.log'
 		}
 
 		root   {
@@ -92,9 +92,9 @@ log4j = {
 		// Set level for all application artefacts
 		  // info "grails.app"
 		  // Set for a specific controller
-    trace "grails.app.controller"
-    trace "grails.app.domain"
-    trace "grails.app.service"
+		all "grails.app.controllers"
+		all "grails.app.domain"
+		all "grails.app.service"
 
     error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
            'org.codehaus.groovy.grails.web.pages', //  GSP

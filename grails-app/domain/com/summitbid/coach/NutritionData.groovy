@@ -7,8 +7,14 @@ class NutritionData {
 	Integer gramsFat
 	
     static constraints = {
+		food(nullable:false)
+		description(nullable:false)
 		calories(nullable:true)
 		gramsFat(nullable:true)
-		food(nullable:true)
+		food(nullable:false)
     }
+	
+	String toString() {
+		return "nutritionData: food: ${food}"
+	}
 }

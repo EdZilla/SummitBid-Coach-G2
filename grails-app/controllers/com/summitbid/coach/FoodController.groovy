@@ -13,15 +13,18 @@ class FoodController {
     }
 
     def list() {
+		log.trace "Executing action: '$actionName' "
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
         [foodInstanceList: Food.list(params), foodInstanceTotal: Food.count()]
     }
 
     def create() {
+		log.trace "Executing action: '$actionName'"
         [foodInstance: new Food(params)]
     }
 
     def save() {
+		log.trace "Executing action: '$actionName' "
         def foodInstance = new Food(params)
 		// add a nutrition data automatically
 		foodInstance.nutritionData = new NutritionData(description:foodInstance.name,food:foodInstance);
@@ -37,6 +40,7 @@ class FoodController {
     }
 
     def show() {
+		log.trace "Executing action: '$actionName'"
         def foodInstance = Food.get(params.id)
 		
         if (!foodInstance) {

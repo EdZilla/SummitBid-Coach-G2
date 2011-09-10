@@ -8,9 +8,10 @@ class Food {
 	
 	
     static constraints = {
-		name(nullable:false)
-		description(nullable:true)
-		nutritionData(nullable:true)
+		
+		name blank: false, unique: true
+		description blank: true
+		nutritionData nullable:false
     }
 	
 	String toString()
