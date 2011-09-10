@@ -6,6 +6,17 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'food.label', default: 'Food')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
+		
+		 <script type="text/javascript" src="jquery.js"></script>          
+			 <script type="text/javascript">                                         
+   			
+   			 $(document).ready(function() {
+   				$("#click_me_link").click(function() {
+     			alert("Hello world!");
+   				});
+ 			});                                  
+ 		</script>        
+ 
 	</head>
 	<body>
 		<a href="#show-food" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -56,7 +67,11 @@
 					<g:hiddenField name="id" value="${foodInstance?.id}" />
 					<g:link class="edit" action="edit" id="${foodInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
 					<g:link controller="meal" class="edit" action="edit" >Add this food to a meal</g:link>
-					
+					 <a href="" id="click_me_link" >Link</a>
+					  <a href="" onclick="alert('Hello world')">Link2</a>
+					  
+					<g:link elementId="click_me_link"  >Click me</g:link>
+					  
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
