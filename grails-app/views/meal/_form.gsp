@@ -18,6 +18,22 @@
 	<g:textField name="description" value="${mealInstance?.description}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: mealInstance, field: 'cost', 'error')} ">
+	<label for="cost">
+		<g:message code="meal.cost.label" default="Cost" />
+		
+	</label>
+	<g:field type="number" name="cost" value="${fieldValue(bean: mealInstance, field: 'cost')}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: mealInstance, field: 'date', 'error')} required">
+	<label for="date">
+		<g:message code="meal.date.label" default="Date" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:datePicker name="date" precision="day"  value="${mealInstance?.date}"  />
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: mealInstance, field: 'foods', 'error')} ">
 	<label for="foods">
 		<g:message code="meal.foods.label" default="Foods" />

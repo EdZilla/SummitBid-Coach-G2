@@ -42,6 +42,24 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${mealInstance?.cost}">
+				<li class="fieldcontain">
+					<span id="cost-label" class="property-label"><g:message code="meal.cost.label" default="Cost" /></span>
+					
+						<span class="property-value" aria-labelledby="cost-label"><g:fieldValue bean="${mealInstance}" field="cost"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${mealInstance?.date}">
+				<li class="fieldcontain">
+					<span id="date-label" class="property-label"><g:message code="meal.date.label" default="Date" /></span>
+					
+						<span class="property-value" aria-labelledby="date-label"><g:formatDate date="${mealInstance?.date}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${mealInstance?.foods}">
 				<li class="fieldcontain">
 					<span id="foods-label" class="property-label"><g:message code="meal.foods.label" default="Foods" /></span>
@@ -61,7 +79,6 @@
 					<g:link controller="food" class="edit" action="list" >Add a food Item</g:link>
 										
 					<g:select name="food" from="${Food.list()}" value="${food}" noSelection="['':'-Choose a food-']"/>
-          				
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
 				</fieldset>
 			</g:form>
