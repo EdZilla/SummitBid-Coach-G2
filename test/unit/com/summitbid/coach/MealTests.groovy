@@ -10,8 +10,9 @@ import org.junit.*
  */
 @TestFor(Meal)
 class MealTests {
-
-    void testSomething() {
-
+	
+	
+	void testSomething() {
+	
     }
 }

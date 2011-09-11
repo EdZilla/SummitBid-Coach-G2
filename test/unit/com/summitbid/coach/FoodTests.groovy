@@ -10,6 +10,8 @@ import org.junit.*
  */
 @TestFor(Food)
 class FoodTests {
+	
+	
 
     void testConstraints() {
 		println "testConstraints enter"
