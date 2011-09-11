@@ -7,6 +7,11 @@
 		<g:set var="entityName" value="${message(code: 'food.label', default: 'Food')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 		
+		<g:javascript library="jquery" />
+		<r:layoutResources/>
+		<jq:plugin name="validate"/>
+		<jq:plugin name="cc_validation"/>
+		
 		 <script type="text/javascript" src="jquery.js"></script>          
 			 <script type="text/javascript">                                         
    			
@@ -66,7 +71,7 @@
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${foodInstance?.id}" />
 					<g:link class="edit" action="edit" id="${foodInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:link controller="meal" class="edit" action="edit" >Add this food to a meal</g:link>
+					<g:link controller="meal" class="edit" action="edit" >Add this food to current meal</g:link>
 					 <a href="" id="click_me_link" >Link</a>
 					  <a href="" onclick="alert('Hello world')">Link2</a>
 					  
