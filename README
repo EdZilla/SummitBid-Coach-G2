@@ -1,3 +1,5 @@
 SummitBid Coach G2
 
-Tracks diet and exercise
+Tracks diet and exercise. Uses Grails 2.0.x
+
+Uses 'FatSecret' javascript and soon to use 'FatSecret' API
