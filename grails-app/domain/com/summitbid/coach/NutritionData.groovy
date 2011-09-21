@@ -22,6 +22,6 @@ class NutritionData {
     }
 	
 	String toString() {
-		return "nutritionData: calories: ${calories}, gramsFat: ${gramsFat}"
+		return "nutritionData: calories: ${calories}, gramsFat: ${gramsFat}, carbs: ${carbs}, protein: ${protein}"
 	}
 }
