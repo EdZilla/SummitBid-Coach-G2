@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${nutritionDataInstance?.servingSize}">
+				<li class="fieldcontain">
+					<span id="servingSize-label" class="property-label"><g:message code="nutritionData.servingSize.label" default="Serving Size" /></span>
+					
+						<span class="property-value" aria-labelledby="servingSize-label"><g:fieldValue bean="${nutritionDataInstance}" field="servingSize"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${nutritionDataInstance?.calories}">
 				<li class="fieldcontain">
 					<span id="calories-label" class="property-label"><g:message code="nutritionData.calories.label" default="Calories" /></span>
@@ -55,6 +64,24 @@
 					<span id="gramsFat-label" class="property-label"><g:message code="nutritionData.gramsFat.label" default="Grams Fat" /></span>
 					
 						<span class="property-value" aria-labelledby="gramsFat-label"><g:fieldValue bean="${nutritionDataInstance}" field="gramsFat"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${nutritionDataInstance?.carbs}">
+				<li class="fieldcontain">
+					<span id="carbs-label" class="property-label"><g:message code="nutritionData.carbs.label" default="Carbs" /></span>
+					
+						<span class="property-value" aria-labelledby="carbs-label"><g:fieldValue bean="${nutritionDataInstance}" field="carbs"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${nutritionDataInstance?.protein}">
+				<li class="fieldcontain">
+					<span id="protein-label" class="property-label"><g:message code="nutritionData.protein.label" default="Protein" /></span>
+					
+						<span class="property-value" aria-labelledby="protein-label"><g:fieldValue bean="${nutritionDataInstance}" field="protein"/></span>
 					
 				</li>
 				</g:if>

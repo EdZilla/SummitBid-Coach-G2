@@ -28,9 +28,13 @@
 					
 						<g:sortableColumn property="description" title="${message(code: 'nutritionData.description.label', default: 'Description')}" />
 					
+						<g:sortableColumn property="servingSize" title="${message(code: 'nutritionData.servingSize.label', default: 'Serving Size')}" />
+					
 						<g:sortableColumn property="calories" title="${message(code: 'nutritionData.calories.label', default: 'Calories')}" />
 					
 						<g:sortableColumn property="gramsFat" title="${message(code: 'nutritionData.gramsFat.label', default: 'Grams Fat')}" />
+					
+						<g:sortableColumn property="carbs" title="${message(code: 'nutritionData.carbs.label', default: 'Carbs')}" />
 					
 					</tr>
 				</thead>
@@ -42,9 +46,13 @@
 					
 						<td>${fieldValue(bean: nutritionDataInstance, field: "description")}</td>
 					
+						<td>${fieldValue(bean: nutritionDataInstance, field: "servingSize")}</td>
+					
 						<td>${fieldValue(bean: nutritionDataInstance, field: "calories")}</td>
 					
 						<td>${fieldValue(bean: nutritionDataInstance, field: "gramsFat")}</td>
+					
+						<td>${fieldValue(bean: nutritionDataInstance, field: "carbs")}</td>
 					
 					</tr>
 				</g:each>

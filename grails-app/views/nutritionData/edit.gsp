@@ -6,7 +6,7 @@
 		<g:set var="entityName" value="${message(code: 'nutritionData.label', default: 'NutritionData')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 		
-		 		<script src="http://platform.fatsecret.com/js?key=006ffa526d1542ef88cbc79733770fe3"></script>
+ 		<script src="http://platform.fatsecret.com/js?key=006ffa526d1542ef88cbc79733770fe3"></script>
 		
 	</head>
 	<body>
@@ -18,9 +18,6 @@
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
-		
-		
-		
 		<div id="edit-nutritionData" class="content scaffold-edit" role="main">
 			<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">

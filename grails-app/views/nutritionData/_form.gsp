@@ -18,6 +18,14 @@
 	<g:textField name="description" value="${nutritionDataInstance?.description}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: nutritionDataInstance, field: 'servingSize', 'error')} ">
+	<label for="servingSize">
+		<g:message code="nutritionData.servingSize.label" default="Serving Size" />
+		
+	</label>
+	<g:field type="number" name="servingSize" value="${fieldValue(bean: nutritionDataInstance, field: 'servingSize')}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: nutritionDataInstance, field: 'calories', 'error')} ">
 	<label for="calories">
 		<g:message code="nutritionData.calories.label" default="Calories" />
@@ -32,5 +40,21 @@
 		
 	</label>
 	<g:field type="number" name="gramsFat" value="${fieldValue(bean: nutritionDataInstance, field: 'gramsFat')}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: nutritionDataInstance, field: 'carbs', 'error')} ">
+	<label for="carbs">
+		<g:message code="nutritionData.carbs.label" default="Carbs" />
+		
+	</label>
+	<g:field type="number" name="carbs" value="${fieldValue(bean: nutritionDataInstance, field: 'carbs')}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: nutritionDataInstance, field: 'protein', 'error')} ">
+	<label for="protein">
+		<g:message code="nutritionData.protein.label" default="Protein" />
+		
+	</label>
+	<g:field type="number" name="protein" value="${fieldValue(bean: nutritionDataInstance, field: 'protein')}"/>
 </div>
 
