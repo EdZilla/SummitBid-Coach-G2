@@ -22,7 +22,7 @@
  			});                                  
  		</script>        
  		
- 		<script src="http://platform.fatsecret.com/js?key=006ffa526d1542ef88cbc79733770fe3"></script>
+ 		
  		
  
 	</head>
@@ -36,12 +36,7 @@
 			</ul>
 		</div>
 		
-		<div id="my_container" class="fatsecret_container" >
-		<script>
-			fatsecret.setContainer("my_container");
-			fatsecret.setCanvas("home");
-		</script>
-		</div>
+		
 		
 		<div id="show-food" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
