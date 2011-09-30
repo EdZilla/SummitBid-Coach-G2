@@ -9,7 +9,23 @@ class FoodController {
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
-        redirect(action: "list", params: params)
+		
+		switch(request.method){
+			case "POST":
+			  render "Create\n"
+			  break
+			case "GET":
+			  render "Retrieve\n"
+			  break
+			case "PUT":
+			  render "Update\n"
+			  break
+			case "DELETE":
+			  render "Delete\n"
+			  break
+		  }
+		
+        //redirect(action: "list", params: params)
     }
 
     def list() {
