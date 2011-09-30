@@ -1,5 +1,5 @@
 package com.summitbid.coach
-
+import grails.converters.*
 import org.springframework.dao.DataIntegrityViolationException
 
 class FoodController {
@@ -17,6 +17,13 @@ class FoodController {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
         [foodInstanceList: Food.list(params), foodInstanceTotal: Food.count()]
     }
+	
+	def listRest() {
+		log.trace "Executing action: '$actionName' "
+		println Food.list()
+		def all = Food.list()
+		render all as JSON
+	}
 
     def create() {
 		log.trace "Executing action: '$actionName'"
@@ -51,6 +58,33 @@ class FoodController {
 
         [foodInstance: foodInstance]
     }
+	
+	def showRest() {
+		log.trace "Executing action: '$actionName'"
+		def foodInstance = Food.get(params.id)
+		println foodInstance as JSON
+		render foodInstance as JSON
+	}
+	
+	def postRest() {
+		log.trace "Executing action: '$actionName', params: '$params', request: '$request.method'"
+		switch(request.method){
+			case "POST":
+//			  def airport = Food.foodFactory(params.name, null)
+//			  if(airport.save()){
+//				response.status = 201 // Created
+//				render airport as XML
+//			  }
+//			  else{
+//				response.status = 500 //Internal Server Error
+//				render "Could not create new Airport due to errors:\n ${airport.errors}"
+//			  }
+			println Food.list()
+			def all = Food.list()
+			render all as JSON
+			  break
+		  }
+	}
 
     def edit() {
         def foodInstance = Food.get(params.id)
