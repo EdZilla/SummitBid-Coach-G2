@@ -12,20 +12,20 @@ class FoodController {
 		
 		switch(request.method){
 			case "POST":
-			  render "Create\n"
+			  println "Create\n"
 			  break
 			case "GET":
-			  render "Retrieve\n"
+			  println "Retrieve\n"
 			  break
 			case "PUT":
-			  render "Update\n"
+			  println "Update\n"
 			  break
 			case "DELETE":
-			  render "Delete\n"
+			  println "Delete\n"
 			  break
 		  }
 		
-        //redirect(action: "list", params: params)
+		redirect(action: "list", params: params)
     }
 
     def list() {
