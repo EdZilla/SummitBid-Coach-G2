@@ -12,16 +12,16 @@ class FoodController {
 		
 		switch(request.method){
 			case "POST":
-			  println "Create\n"
+			  println "POST is Create\n"
 			  break
 			case "GET":
-			  println "Retrieve\n"
+			  println "GEt is Retrieve\n"
 			  break
 			case "PUT":
-			  println "Update\n"
+			  println "PUT is Update\n"
 			  break
 			case "DELETE":
-			  println "Delete\n"
+			  println "DELETE is Delete\n"
 			  break
 		  }
 		
