@@ -9,6 +9,8 @@ class NutritionData {
 	Float carbs
 	Float protein 
 	
+	static belongsTo = [ food:Food ]
+	
 	
     static constraints = {
 		food(nullable:false)
