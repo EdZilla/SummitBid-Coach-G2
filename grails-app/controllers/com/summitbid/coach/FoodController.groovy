@@ -144,6 +144,8 @@ class FoodController {
     }
 
     def delete() {
+		log.trace "Executing action: '$actionName', params: '$params', request: '$request.method'"
+		
         def foodInstance = Food.get(params.id)
         if (!foodInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'food.label', default: 'Food'), params.id])
