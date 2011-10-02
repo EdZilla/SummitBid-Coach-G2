@@ -3,23 +3,31 @@ import com.summitbid.coach.Food
 
 class BootStrap {
 
-def init = { servletContext ->
-	
+	def init = { servletContext ->
+
 		def fixtureLoader
-		
-//		def myFood
-//			10.times {
-//				//println it
-//				 myFood = Food.foodFactory("bagel-${it}", "einsteins")
-//				 println myFood
-//			}
-//			println "Bootstrapped foods: " + Food.list()
+
+		environments { 
 			
-		def user = new ShiroUser(username: "ed", passwordHash: new Sha256Hash("gr00vy").toHex()) 
-		user.addToPermissions("*:*") 
-		user.save() 
+			production { println "environment is PRODUCTION" } }
+	//		test { println "environment is TEST" } }
+	
+		development {
+			println "environment is DEVELOPMENT"
+			def myFood
+			10.times {
+				//println it
+				myFood = Food.foodFactory("bagel-${it}", "einsteins")
+				println myFood
+			}
+			println "Bootstrapped foods: " + Food.list()
+
+			def user = new ShiroUser(username: "ed", passwordHash: new Sha256Hash("gr00vy").toHex())
+			user.addToPermissions("*:*")
+			user.save()
+		}
 	}
 
-def destroy = { 
-	} 
+	def destroy = {
+	}
 }
