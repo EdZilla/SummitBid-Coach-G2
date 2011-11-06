@@ -20,8 +20,7 @@ import net.sf.json.JSON
 class ExerciseTests {
 	def client;
 	//def baseUri = 'http://platform.fatsecret.com/rest/server.api';
-	def baseUri = "http" + URLEncoder.encode("://") + "platform.fatsecret.com" + URLEncoder.encode("/") + "rest" + URLEncoder.encode("/") + "server.api" + URLEncoder.encode("?")
-
+	def baseUri = "http://platform.fatsecret.com/rest/server.api?"
 
 	static final String  oauth_consumer_key = "006ffa526d1542ef88cbc79733770fe3"
 	static final String  oauth_version = "1.0"
@@ -43,27 +42,38 @@ class ExerciseTests {
 
 		client = new RESTClient(baseUri)
 		def signatureBaseString = createSignatureBaseString()
+		
 		println "sig base: ${signatureBaseString}"
+		def sigBase = URLEncoder.encode(signatureBaseString)
+		println "sig base: ${sigBase}"
+		
+		def sigValue = calculateSigValue()
 
-
-		//		try {
-		//			def response = client.get( path: "rest/server.api" )
-		//			println "uri: ${client.getUri()}"
-		//		} catch(groovyx.net.http.HttpResponseException ex)
-		//		{
-		//			println "ex: ${ex}"
-		//			def resp = ex.getResponse()
-		//			def data = resp.getData()
-		//			println "data: " + data
-		//			def header = resp.getAllHeaders()
-		//			println "header: " + header
-		//			def status = resp.getStatus()
-		//			println "status: " + status
-		//		}
+				try {
+					def response = client.get( path: "rest/server.api?method=exercises.get&oauth_consumer_key=006ffa526d1542ef88cbc79733770fe3&oauth_nonce=8777-1320586859897&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1320586859897&oauth_version=1.0"
+					println "uri: ${client.getUri()}"
+				} catch(groovyx.net.http.HttpResponseException ex)
+				{
+					println "ex: ${ex}"
+					def resp = ex.getResponse()
+					def data = resp.getData()
+					println "data: " + data
+					def header = resp.getAllHeaders()
+					println "header: " + header
+					def status = resp.getStatus()
+					println "status: " + status
+				}
 
 	}
 
-
+	/**
+	 * 
+	 * @return
+	 */
+	String calculateSigValue()
+	{
+		
+	}
 
 	/**
 	 * Step 1. Creating a Signature Base String
@@ -79,21 +89,7 @@ class ExerciseTests {
 		def requestUri
 		def normalizedParams
 		def timeStamp = new Date().getTime()
-		def oauth_timestamp_tuple = "oauth_timestamp=${timeStamp}"
-		def oauth_consumer_key_tuple = "oauth_consumer_key=${oauth_consumer_key}"
-		def oauth_version_tuple = "oauth_version=${oauth_version}"
-		def oauth_signature_method_tuple = "oauth_signature_method=${oauth_signature_method}"
-		def method_tuple = "method=exercises.get"
-		def oauth_nonce_tuple = "oauth_nonce=${myRand}-${timeStamp}"
 		def random
-		def commands = [
-			"${oauth_consumer_key_tuple}",
-			"${method_tuple}",
-			"${oauth_nonce_tuple}",
-			"${oauth_signature_method_tuple}",
-			"${oauth_timestamp_tuple}",
-			"${oauth_version_tuple}"
-		]
 		
 		
 		def qMap = [
@@ -106,13 +102,11 @@ class ExerciseTests {
 			]
 		
 		def orderedMap = qMap.sort()
-		println "orderedMap: ${orderedMap}"
+//		println "orderedMap: ${orderedMap}"
 		def qs = new QueryString(orderedMap)
-		println "qs: " + qs
+//		println "qs: " + qs
 
-		//println "base: ${base}"
 		def base = "${HTTP_GET}&${baseUri}${qs}"
-		//println "base: ${base}"
 
 		return base
 	}
@@ -138,10 +132,9 @@ class ExerciseTests {
 		String toString(){
 			def list = []
 			params.each{name,value->
-				list << "$name"  + URLEncoder.encode("=") + URLEncoder.encode(value.toString())
+				list << "$name=" + URLEncoder.encode(value.toString())
 			}
-			//return list.join("&" )
-			return list.join( URLEncoder.encode('&'))
+			return list.join("&" )
 		}
 	}
 }
