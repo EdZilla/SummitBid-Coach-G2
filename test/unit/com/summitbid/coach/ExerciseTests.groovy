@@ -20,7 +20,7 @@ import net.sf.json.JSON
 class ExerciseTests {
 	def client;
 	//def baseUri = 'http://platform.fatsecret.com/rest/server.api';
-	def baseUri = "http" + URLEncoder.encode("://") + "platform.fatsecret.com/rest/server.api"
+	def baseUri = "http" + URLEncoder.encode("://") + "platform.fatsecret.com" + URLEncoder.encode("/") + "rest" + URLEncoder.encode("/") + "server.api" + URLEncoder.encode("?")
 
 
 	static final String  oauth_consumer_key = "006ffa526d1542ef88cbc79733770fe3"
@@ -138,7 +138,7 @@ class ExerciseTests {
 		String toString(){
 			def list = []
 			params.each{name,value->
-				list << "$name=" + URLEncoder.encode(value.toString())
+				list << "$name"  + URLEncoder.encode("=") + URLEncoder.encode(value.toString())
 			}
 			//return list.join("&" )
 			return list.join( URLEncoder.encode('&'))
