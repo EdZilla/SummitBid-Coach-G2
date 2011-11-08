@@ -8,15 +8,16 @@
 	value="${message(code: 'food.label', default: 'Food')}" />
 <title><g:message code="default.show.label" args="[entityName]" /></title>
 
+<%--per glauser's suggestion--%>
 <g:javascript library="jquery" />
 <r:layoutResources />
 <jq:plugin name="validate" />
 <jq:plugin name="cc_validation" />
 
-
 <script type="text/javascript">                                         
    			
    			 $(document).ready(function() {
+
    				$("#click_me_link").click(function() {
      			alert("Hello world!");
    				});
@@ -102,11 +103,6 @@
 			</fieldset>
 		</g:form>
 	</div>
-	<div id="my_container" class="fatsecret_container"></div>
-	<script>
-			fatsecret.setContainer("my_container");
-			fatsecret.setCanvas("home");
-		</script>
 
 </body>
 </html>
