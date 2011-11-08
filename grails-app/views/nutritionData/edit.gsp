@@ -6,6 +6,7 @@
 		<g:set var="entityName" value="${message(code: 'nutritionData.label', default: 'NutritionData')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 		
+<%--		fatsecret api--%>
  		<script src="http://platform.fatsecret.com/js?key=006ffa526d1542ef88cbc79733770fe3"></script>
 		
 	</head>
