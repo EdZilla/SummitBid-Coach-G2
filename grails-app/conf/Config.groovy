@@ -114,3 +114,28 @@ log4j = {
 
     warn   'org.mortbay.log'
 }
+
+/**
+ * the example from the oauth grails plugin 
+ * 
+ */
+oauth {
+	provider_name {
+		requestTokenUrl = 'http://example.com/oauth/request_token'
+		accessTokenUrl = 'http://example.com/oauth/access_token'
+		authUrl = 'http://example.com/oauth/authorize'
+				scope = 'http://example.com/oauth/feed/api/' // Optional - currently required by the Google GData APIs
+		consumer.key = 'key'
+		consumer.secret = 'secret'
+	}
+}
+
+/**
+ * This is necessary Per the Oauth plugin FAQ
+ */
+httpClient {
+	timeout {
+		socket = 5000
+		connection = 5000
+	}
+}

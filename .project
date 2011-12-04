@@ -26,7 +26,7 @@
 		<link>
 			<name>.link_to_grails_plugins</name>
 			<type>2</type>
-			<locationURI>GRAILS_ROOT/2.0.0.M2/projects/coach-g2/plugins</locationURI>
+			<locationURI>GRAILS_ROOT/2.0.0.RC1/projects/coach/plugins</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
