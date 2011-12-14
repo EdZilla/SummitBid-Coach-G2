@@ -1,4 +1,4 @@
-#Thu Sep 08 02:42:28 MDT 2011
-com.springsource.sts.grails.core.com.springsource.sts.grails.core.install.name=Grails 2.0.0.M2
-com.springsource.sts.grails.core.use.default.install=true
+#Sun Dec 04 15:58:51 MST 2011
+com.springsource.sts.grails.core.com.springsource.sts.grails.core.install.name=Grails 2.0.0.RC3
+com.springsource.sts.grails.core.use.default.install=false
 eclipse.preferences.version=1
