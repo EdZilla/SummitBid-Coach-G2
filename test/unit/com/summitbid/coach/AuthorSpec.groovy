@@ -3,7 +3,14 @@ package com.summitbid.coach
 import spock.lang.*
 import grails.plugin.spock.*
 
-class AuthorSpec extends UnitSpec {
+/**
+ * 
+ * @author eyoung2297k
+ * NOTE: This originally extended grails.plugin.spock.UnitSpec, but it errored out
+ * because the mockDomain defined in the testing mixin clashed with the spock plugin UnitSpec.
+ * According to LD the way to best handle it is to extend spock.lang.Specification.
+ */
+class AuthorSpec extends spock.lang.Specification {
 
     def "feature method"() {
 		setup: 
