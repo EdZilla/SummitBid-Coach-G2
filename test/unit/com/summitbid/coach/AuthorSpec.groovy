@@ -35,8 +35,8 @@ import grails.plugin.spock.*
  * 
  * 
  */
-//class AuthorSpec extends spock.lang.Specification {
-class AuthorSpec extends grails.plugin.spock.UnitSpec {
+class AuthorSpec extends spock.lang.Specification {
+//class AuthorSpec extends grails.plugin.spock.UnitSpec {
 
     def "feature method"() {
 		setup: 
