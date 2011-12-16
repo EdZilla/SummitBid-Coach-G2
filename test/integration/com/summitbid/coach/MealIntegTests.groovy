@@ -3,7 +3,7 @@ package com.summitbid.coach
 import static org.junit.Assert.*
 import org.junit.*
 
-class MealTests {
+class MealIntegTests {
 	
 	def fixtureLoader
 	
