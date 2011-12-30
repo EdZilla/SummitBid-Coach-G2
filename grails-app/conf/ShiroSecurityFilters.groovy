@@ -10,7 +10,7 @@ class ShiroSecurityFilters {
                 if (!controllerName) return true
 
                 // Access control by convention.
-                accessControl()
+                //accessControl()
             }
         }
     }
