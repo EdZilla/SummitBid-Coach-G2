@@ -8,11 +8,18 @@ class BootStrap {
 		def fixtureLoader
 
 		environments { 
-			
+			def user
 			production { println "environment is PRODUCTION" } 
-				def user = new ShiroUser(username: "admin", passwordHash: new Sha256Hash("gr00vy").toHex())
-				user.addToPermissions("*:*")
-				user.save()
+				def admin = ShiroUser.findByUsername('admin')
+				
+				if (!admin) {
+					user = new ShiroUser(username: "admin", passwordHash: new Sha256Hash("gr00vy").toHex())
+					user.addToPermissions("*:*")
+					user.save()
+				}
+				else {
+					println "user ${admin.username} already exists"
+				}
 			}
 
 			//		test { println "environment is TEST" } }
@@ -27,9 +34,16 @@ class BootStrap {
 			}
 			println "Bootstrapped foods: " + Food.list()
 
-			def user = new ShiroUser(username: "ed", passwordHash: new Sha256Hash("gr00vy").toHex())
-			user.addToPermissions("*:*")
-			user.save()
+			def admin = ShiroUser.findByUsername('admin')
+				
+				if (!admin) {
+					user = new ShiroUser(username: "admin", passwordHash: new Sha256Hash("gr00vy").toHex())
+					user.addToPermissions("*:*")
+					user.save()
+				}
+				else {
+					println "user ${admin.username} already exists"
+				}
 		}
 	}
 
