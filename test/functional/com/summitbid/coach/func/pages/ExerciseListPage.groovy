@@ -10,7 +10,7 @@ class ExerciseListPage extends Page {
 
 
   static content = {
-	//componentList{  }
+  	
   }
 
 }
