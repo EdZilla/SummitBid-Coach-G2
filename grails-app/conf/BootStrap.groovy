@@ -9,8 +9,13 @@ class BootStrap {
 
 		environments { 
 			
-			production { println "environment is PRODUCTION" } }
-	//		test { println "environment is TEST" } }
+			production { println "environment is PRODUCTION" } 
+				def user = new ShiroUser(username: "ed", passwordHash: new Sha256Hash("gr00vy").toHex())
+				user.addToPermissions("*:*")
+				user.save()
+			}
+
+			//		test { println "environment is TEST" } }
 	
 		development {
 			println "environment is DEVELOPMENT"
