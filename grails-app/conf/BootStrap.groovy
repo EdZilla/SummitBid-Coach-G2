@@ -10,7 +10,7 @@ class BootStrap {
 		environments { 
 			
 			production { println "environment is PRODUCTION" } 
-				def user = new ShiroUser(username: "ed", passwordHash: new Sha256Hash("gr00vy").toHex())
+				def user = new ShiroUser(username: "admin", passwordHash: new Sha256Hash("gr00vy").toHex())
 				user.addToPermissions("*:*")
 				user.save()
 			}
