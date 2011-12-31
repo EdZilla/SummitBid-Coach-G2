@@ -8,6 +8,7 @@ class NutritionData {
 	Float gramsFat
 	Float carbs
 	Float protein 
+	Float sodium
 	
 	static belongsTo = [ food:Food ]
 	
@@ -20,10 +21,11 @@ class NutritionData {
 		gramsFat(nullable:true)
 		carbs(nullable:true)
 		protein(nullable:true)
+		sodium(nullable:true)
 		food(nullable:false)
     }
 	
 	String toString() {
-		return "nutritionData: calories: ${calories}, gramsFat: ${gramsFat}, carbs: ${carbs}, protein: ${protein}"
+		return "nutritionData: calories: ${calories}, gramsFat: ${gramsFat}, carbs: ${carbs}, protein: ${protein}, sodium: ${sodium}"
 	}
 }

@@ -52,9 +52,16 @@
 
 <div class="fieldcontain ${hasErrors(bean: nutritionDataInstance, field: 'protein', 'error')} ">
 	<label for="protein">
-		<g:message code="nutritionData.protein.label" default="Protein" />
+		<g:message code="nutritionData.protein.label" default="grams Protein" />
 		
 	</label>
 	<g:field type="number" name="protein" value="${fieldValue(bean: nutritionDataInstance, field: 'protein')}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: nutritionDataInstance, field: 'sodium', 'error')} ">
+	<label for="sodium">
+		<g:message code="nutritionData.sodium.label" default="grams Sodium" />
+		
+	</label>
+	<g:field type="number" name="Sodium" value="${fieldValue(bean: nutritionDataInstance, field: 'sodium')}"/>
+</div>

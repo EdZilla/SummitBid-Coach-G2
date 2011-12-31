@@ -26,11 +26,11 @@
 	<g:field type="number" name="cost" value="${fieldValue(bean: foodInstance, field: 'cost')}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: foodInstance, field: 'nutritionData', 'error')} required">
-	<label for="nutritionData">
-		<g:message code="food.nutritionData.label" default="Nutrition Data" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="nutritionData" name="nutritionData.id" from="${com.summitbid.coach.NutritionData.list()}" optionKey="id" required="" value="${foodInstance?.nutritionData?.id}" class="many-to-one"/>
-</div>
+<%--<div class="fieldcontain ${hasErrors(bean: foodInstance, field: 'nutritionData', 'error')} required">--%>
+<%--	<label for="nutritionData">--%>
+<%--		<g:message code="food.nutritionData.label" default="Nutrition Data" />--%>
+<%--		<span class="required-indicator">*</span>--%>
+<%--	</label>--%>
+<%--	<g:select id="nutritionData" name="nutritionData.id" from="${com.summitbid.coach.NutritionData.list()}" optionKey="id" required="" value="${foodInstance?.nutritionData?.id}" class="many-to-one"/>--%>
+<%--</div>--%>
 

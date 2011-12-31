@@ -84,6 +84,15 @@
 					
 				</li>
 				</g:if>
+				
+				<g:if test="${nutritionDataInstance?.sodium}">
+				<li class="fieldcontain">
+					<span id="sodium-label" class="property-label"><g:message code="nutritionData.sodium.label" default="Sodium" /></span>
+					
+						<span class="property-value" aria-labelledby="sodium-label"><g:fieldValue bean="${nutritionDataInstance}" field="sodium"/></span>
+					
+				</li>
+				</g:if>
 			
 			</ol>
 			<g:form>
