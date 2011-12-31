@@ -28,6 +28,8 @@
 					
 						<g:sortableColumn property="description" title="${message(code: 'food.description.label', default: 'Description')}" />
 					
+						<g:sortableColumn property="cost" title="${message(code: 'food.cost.label', default: 'Cost')}" />
+					
 						<th><g:message code="food.nutritionData.label" default="Nutrition Data" /></th>
 					
 					</tr>
@@ -39,6 +41,8 @@
 						<td><g:link action="show" id="${foodInstance.id}">${fieldValue(bean: foodInstance, field: "name")}</g:link></td>
 					
 						<td>${fieldValue(bean: foodInstance, field: "description")}</td>
+					
+						<td>${fieldValue(bean: foodInstance, field: "cost")}</td>
 					
 						<td>${fieldValue(bean: foodInstance, field: "nutritionData")}</td>
 					

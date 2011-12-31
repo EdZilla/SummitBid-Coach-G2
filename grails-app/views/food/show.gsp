@@ -64,12 +64,22 @@
 							bean="${foodInstance}" field="name" /></span></li>
 			</g:if>
 
+			
+			
 			<g:if test="${foodInstance?.description}">
 				<li class="fieldcontain"><span id="description-label"
 					class="property-label"><g:message
 							code="food.description.label" default="Description" /></span> <span
 					class="property-value" aria-labelledby="description-label"><g:fieldValue
 							bean="${foodInstance}" field="description" /></span></li>
+			</g:if>
+			
+			<g:if test="${foodInstance?.cost}">
+				<li class="fieldcontain"><span id="cost-label"
+					class="property-label"><g:message
+							code="food.cost.label" default="Cost" /></span> <span
+					class="property-value" aria-labelledby="cost-label"><g:fieldValue
+							bean="${foodInstance}" field="cost" /></span></li>
 			</g:if>
 
 			<g:if test="${foodInstance?.nutritionData}">
