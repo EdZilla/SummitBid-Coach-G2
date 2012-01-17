@@ -1,6 +1,7 @@
 package com.summitbid.coach.func;
 
 import geb.spock.GebReportingSpec
+import geb.Browser
 
 import spock.lang.*
 
@@ -10,21 +11,24 @@ import com.summitbid.coach.func.pages.FoodListPage
 @Stepwise
 class FoodListSpec extends GebReportingSpec {
 	
-	String getBaseUrl() { "http://localhost:8080/coach/" }
 
+	
 	/**
 	 * Assumes there are exercises
 	 * @return
 	 */
 	def "List all Foods"() {
 		//println "List all exercises"
-		when: 
+		when:
+		def browser = new Browser()
+		browser.setBaseUrl( "http://localhost:8080/coach/" )
+		
 		println "when go to FoodListPage"
-		to FoodListPage
+		browser.to FoodListPage
 		
 		then: 
 		print "then "
 		println "at FoodListPage"
-		at FoodListPage
+		browser.at FoodListPage
 	}
 }
