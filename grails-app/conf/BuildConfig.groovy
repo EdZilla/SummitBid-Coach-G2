@@ -50,7 +50,7 @@ grails.project.dependency.resolution = {
         compile ":hibernate:$grailsVersion"
         build ":tomcat:$grailsVersion"
 
-		// compile ":svn:1.0.2"  // do I need this? 
+		//compile ":svn:1.0.2"  // do I need this? 
 		
 		runtime ":jquery:1.7.1"
 		runtime ":resources:1.1.6"

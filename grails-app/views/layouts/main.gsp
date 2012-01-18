@@ -7,8 +7,6 @@
 	<head>
 		<nav:resources/>
 		
-		<g:javascript library="jquery" plugin="jquery"/>
-		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><g:layoutTitle default="Grails"/></title>
@@ -28,6 +26,5 @@
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-		<g:javascript library="application"/>
 	</body>
 </html>
