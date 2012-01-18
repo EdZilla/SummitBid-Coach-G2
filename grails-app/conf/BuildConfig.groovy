@@ -48,15 +48,21 @@ grails.project.dependency.resolution = {
 
     plugins {
         compile ":hibernate:$grailsVersion"
-        runtime ":jquery:1.7.1"
-        runtime ":resources:1.1.6"
-
         build ":tomcat:$grailsVersion"
+
+		// compile ":svn:1.0.2"  // do I need this? 
 		
+		runtime ":jquery:1.7.1"
+		runtime ":resources:1.1.6"
 		compile ":spock:0.6-SNAPSHOT"
 		//test ":spock:0.5-groovy-1.8"
 		compile ":geb:$gebVersion"
-		
+		compile ":database-migration:1.0"
+		compile ":code-coverage:1.2.5"
+		compile ":easyb:2.0.5"
+		compile ":fixtures:1.1"
+		compile ":shiro:1.1.3"
+		compile ":navigation:1.3.2"
 		
     }
 }
