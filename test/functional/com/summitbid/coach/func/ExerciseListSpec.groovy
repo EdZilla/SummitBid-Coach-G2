@@ -1,6 +1,7 @@
 package com.summitbid.coach.func;
 
 import geb.spock.GebReportingSpec
+import geb.spock.GebSpec
 
 import spock.lang.*
 
@@ -8,9 +9,9 @@ import spock.lang.*
 import com.summitbid.coach.func.pages.ExerciseListPage
 
 @Stepwise
-class ExerciseListSpec extends GebReportingSpec {
+class ExerciseListSpec extends GebSpec {
 	
-	String getBaseUrl() { "http://localhost:8080/coach/" }
+	//String getBaseUrl() { "http://localhost:8080/coach/" }
 
 	/**
 	 * Assumes there are exercises
