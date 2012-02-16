@@ -63,6 +63,7 @@ grails.project.dependency.resolution = {
 		compile ":fixtures:1.1"
 		compile ":shiro:1.1.3"
 		compile ":navigation:1.3.2"
+		compile ":jquery-ui:1.8.15"
 		
     }
 }
