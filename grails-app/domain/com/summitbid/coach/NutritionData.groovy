@@ -1,6 +1,6 @@
 package com.summitbid.coach
 
-class NutritionData {
+class NutritionData extends BaseDomain {
 	Food food
 	String description = "description"
 	Integer servingSize

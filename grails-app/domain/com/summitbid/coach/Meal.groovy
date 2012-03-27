@@ -2,8 +2,8 @@ package com.summitbid.coach
 
 import java.util.Date;
 
-class Meal {
-	String name
+class Meal extends BaseDomain {
+	//String name
 	Date date;
 	String description
 	Float cost;

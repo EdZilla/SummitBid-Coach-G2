@@ -1,8 +1,9 @@
 package com.summitbid.coach
 
-class Food {
+class Food extends BaseDomain {
+//class Food {
 
-	String name
+	//String name
 	String description
 	Float cost;
 	NutritionData nutritionData
