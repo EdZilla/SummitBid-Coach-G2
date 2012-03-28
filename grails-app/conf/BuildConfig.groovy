@@ -15,7 +15,7 @@ grails.project.dependency.resolution = {
     checksums true // Whether to verify checksums on resolve
 	
 	//def gebVersion = "0.6.1"
-	def gebVersion = "0.6.2"
+	def gebVersion = "0.6.3"
 	def seleniumVersion = "2.0rc3"
 
     repositories {
@@ -39,7 +39,7 @@ grails.project.dependency.resolution = {
 		test "org.codehaus.groovy.modules.http-builder:http-builder:0.5.1"		
 		test "org.codehaus.geb:geb-spock:$gebVersion"
 		
-		test "org.codehaus.geb:geb-junit4:0.6.2"
+		test "org.codehaus.geb:geb-junit4:0.6.3"
 		test 'org.seleniumhq.selenium:selenium-firefox-driver:2.0rc3'
 		test 'org.seleniumhq.selenium:selenium-chrome-driver:2.0rc3'
 		//test 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.0rc3'		
@@ -54,7 +54,7 @@ grails.project.dependency.resolution = {
 		
 		runtime ":jquery:1.7.1"
 		runtime ":resources:1.1.6"
-		compile ":spock:0.6-SNAPSHOT"
+		compile ":spock:0.6"
 		//test ":spock:0.5-groovy-1.8"
 		compile ":geb:$gebVersion"
 		compile ":database-migration:1.0"
