@@ -1,5 +1,6 @@
 import org.apache.shiro.crypto.hash.Sha256Hash
 import com.summitbid.coach.Food
+import grails.converters.JSON
 
 class BootStrap {
 
@@ -11,6 +12,12 @@ class BootStrap {
 			def user
 			production { println "environment is PRODUCTION" } 
 				def admin = ShiroUser.findByUsername('admin')
+				
+				String VCAP_SERVICES = System.getenv('VCAP_SERVICES')
+				println "VCAP_SERVICES: ${System.getenv('VCAP_SERVICES')}\n"
+//				def service = JSON.parse(VCAP_SERVICES).find { it.key.startsWith('mysql') }.value[0]
+//				println """MySQL url: jdbc:mysql://$service.credentials.hostname:$service.credentials.port/$service.credentials.user: $service.credentials.user
+//password: $service.credentials.password"""
 				
 				if (!admin) {
 					user = new ShiroUser(username: "admin", passwordHash: new Sha256Hash("gr00vy").toHex())

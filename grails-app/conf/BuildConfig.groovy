@@ -58,12 +58,13 @@ grails.project.dependency.resolution = {
 		//test ":spock:0.5-groovy-1.8"
 		compile ":geb:$gebVersion"
 		compile ":database-migration:1.0"
-		compile ":code-coverage:1.2.5"
+		//compile ":code-coverage:1.2.5"
 		compile ":easyb:2.0.5"
 		compile ":fixtures:1.1"
 		compile ":shiro:1.1.3"
 		compile ":navigation:1.3.2"
 		compile ":jquery-ui:1.8.15"
+		compile ":cloud-foundry:1.2.3"
 		
     }
 }

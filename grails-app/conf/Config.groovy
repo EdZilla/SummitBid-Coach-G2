@@ -71,9 +71,10 @@ environments {
 	}
     production {
 		println "Environment is PRODUCTION"
+		grails.dbconsole.enabled = true
         grails.logging.jul.usebridge = false
         //grails.serverURL = "http://www.changeme.com"
-		grails.serverURL = "http://coach.summitbid.com"
+		//grails.serverURL = "http://coach.summitbid.com"
 		
     }
 }
@@ -89,8 +90,8 @@ log4j = {
 	
 	
 		appenders {
-			file name: 'file', file: '/opt/data/logs/coachg2/coachg2.log'
-			file name: 'stacktrace', file: '/opt/data/logs/coachg2/coachg2stacktrace.log'
+			//file name: 'file', file: '/opt/data/logs/coachg2/coachg2.log'
+			//file name: 'stacktrace', file: '/opt/data/logs/coachg2/coachg2stacktrace.log'
 		}
 
 		root   {
