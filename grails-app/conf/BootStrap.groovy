@@ -10,14 +10,16 @@ class BootStrap {
 
 		environments { 
 			def user
-			production { println "environment is PRODUCTION" } 
+			production { println "environment is PRODUCTION"  
 				def admin = ShiroUser.findByUsername('admin')
 				
 				String VCAP_SERVICES = System.getenv('VCAP_SERVICES')
 				println "VCAP_SERVICES: ${System.getenv('VCAP_SERVICES')}\n"
-//				def service = JSON.parse(VCAP_SERVICES).find { it.key.startsWith('mysql') }.value[0]
-//				println """MySQL url: jdbc:mysql://$service.credentials.hostname:$service.credentials.port/$service.credentials.user: $service.credentials.user
-//password: $service.credentials.password"""
+				def service = JSON.parse(VCAP_SERVICES).find { it.key.startsWith('mysql') }.value[0]
+				println """MySQL url: jdbc:mysql://$service.credentials.hostname:$service.credentials.port:$service.credentials.name
+						   user: $service.credentials.user
+						   password: $service.credentials.password"""
+
 				
 				if (!admin) {
 					user = new ShiroUser(username: "admin", passwordHash: new Sha256Hash("gr00vy").toHex())
@@ -52,6 +54,7 @@ class BootStrap {
 					println "user ${admin.username} already exists"
 				}
 		}
+	}
 	}
 
 	def destroy = {

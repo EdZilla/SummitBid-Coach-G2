@@ -65,6 +65,8 @@ grails.project.dependency.resolution = {
 		compile ":navigation:1.3.2"
 		compile ":jquery-ui:1.8.15"
 		compile ":cloud-foundry:1.2.3"
+		compile ':cloud-foundry-ui:1.1'
+		compile ":google-visualization:0.6"
 		
     }
 }

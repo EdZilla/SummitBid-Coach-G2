@@ -38,7 +38,7 @@ environments {
             //dbCreate = "update"
 			dbCreate = "create-drop"
             //url = "jdbc:h2:/opt/data/db/coachg2/prodDb"
-			url = "jdbc:mysql://localhost:3306/coachg2?autoReconnect=true"
+			url = "jdbc:mysql://localhost:3306/coachg2?autoReconnect=true&useUnicode=true&characterEncoding=utf8"
         }
     }
 }
