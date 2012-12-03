@@ -60,6 +60,11 @@ grails.web.disable.multipart=false
 // request parameters to mask when logging exceptions
 grails.exceptionresolver.params.exclude = ['password']
 
+// not yet using this
+grails.gorm.default.constraints = {
+	myShared(nullable: true)
+}
+
 // set per-environment serverURL stem for creating absolute links
 environments {
     development {
