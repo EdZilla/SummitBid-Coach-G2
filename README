@@ -1,5 +1,18 @@
 SummitBid Coach G2
 
-Tracks diet and exercise. Uses Grails 2.0.x
+Tracks diet and exercise. Uses Grails 2.1.x
 
 Uses 'FatSecret' javascript and soon to use 'FatSecret' API
+
+
+run tests with 
+grails test-app
+
+functional tests (geb)
+grails test-app functional: baseUrl=https://coach.cloudfoundry.com/
+
+Deployed in Cloud Foundry
+grails prod cf-update
+
+easyb stories
+grails test-app :easyb

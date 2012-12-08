@@ -14,8 +14,11 @@ grails.project.dependency.resolution = {
     log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
 	
+	def spockVersion = "0.6"
+	//def spockVersion = "0.7"
 	//def gebVersion = "0.6.1"
-	def gebVersion = "0.6.3"
+	//def gebVersion = "0.6.3"
+	def gebVersion = "0.7.2"
 	def seleniumVersion = "2.0rc3"
 
     repositories {
@@ -31,15 +34,20 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
+		
+		// According to Marcin Erdmann, geb release candidate versions are only avialable from sonatype snapshot repo
+		mavenRepo "https://oss.sonatype.org/content/repositories/snapshots/"
     }
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
         runtime 'mysql:mysql-connector-java:5.1.16'
-		test "org.codehaus.groovy.modules.http-builder:http-builder:0.5.1"		
+		// apparently required by RESTClient. Not sure we need rest client. 
+		// Maybe we should use rest-client-builder?
+		test "org.codehaus.groovy.modules.http-builder:http-builder:0.6"
 		test "org.codehaus.geb:geb-spock:$gebVersion"
 		
-		test "org.codehaus.geb:geb-junit4:0.6.3"
+		test "org.codehaus.geb:geb-junit4:$gebVersion"
 		test 'org.seleniumhq.selenium:selenium-firefox-driver:2.0rc3'
 		test 'org.seleniumhq.selenium:selenium-chrome-driver:2.0rc3'
 		//test 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.0rc3'		
@@ -50,23 +58,21 @@ grails.project.dependency.resolution = {
         compile ":hibernate:$grailsVersion"
         build ":tomcat:$grailsVersion"
 
-		compile ":svn:1.0.2"  // do I need this? 
-		
 		runtime ":jquery:1.7.1"
 		runtime ":resources:1.1.6"
-		compile ":spock:0.6"
-		//test ":spock:0.5-groovy-1.8"
+		compile ":spock:$spockVersion"
 		compile ":geb:$gebVersion"
 		compile ":database-migration:1.0"
-		//compile ":code-coverage:1.2.5"
 		compile ":easyb:2.0.5"
-		compile ":fixtures:1.1"
-		compile ":shiro:1.1.3"
+		compile ":fixtures:1.2"
+		compile ":shiro:1.1.4"
 		compile ":navigation:1.3.2"
 		compile ":jquery-ui:1.8.15"
 		compile ":cloud-foundry:1.2.3"
 		compile ':cloud-foundry-ui:1.1'
 		compile ":google-visualization:0.6"
 		
+		// experimental
+		//runtime 'com.datomic:datomic-free:0.8.3551'
     }
 }
