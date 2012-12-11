@@ -55,11 +55,12 @@ grails.project.dependency.resolution = {
         compile ":hibernate:$grailsVersion"
         build ":tomcat:$grailsVersion"
 
-		runtime ":jquery:1.7.1"
+		runtime ":jquery:1.8.3"
 		runtime ":resources:1.1.6"
+		compile ":jquery-ui:1.8.24"
 		compile ":spock:$spockVersion"
 		compile ":geb:$gebVersion"
-		compile ":database-migration:1.0"
+		compile ":database-migration:1.2.2"
 		compile ":easyb:2.0.5"
 		
 		compile ":fixtures:1.2"
@@ -67,7 +68,7 @@ grails.project.dependency.resolution = {
 		
 		compile ":shiro:1.1.4"
 		compile ":navigation:1.3.2"
-		compile ":jquery-ui:1.8.15"
+		
 		compile ":cloud-foundry:1.2.3"
 		compile ':cloud-foundry-ui:1.1'
 		compile ":google-visualization:0.6"
