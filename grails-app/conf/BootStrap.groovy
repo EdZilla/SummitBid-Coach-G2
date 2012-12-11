@@ -4,9 +4,13 @@ import com.summitbid.coach.Exercise
 import com.summitbid.coach.Meal
 import com.summitbid.coach.Workout
 import com.summitbid.coach.Activity
+import com.summitbid.coach.Equipment
 
 import grails.converters.JSON
 
+import grails.buildtestdata.mixin.Build
+
+@Build(Food)
 class BootStrap {
 
 	def init = { servletContext ->
@@ -58,6 +62,7 @@ class BootStrap {
 
 			test {
 				println "BOOTSTRAP environment: TEST"
+
 				bootStrappedDomains()
 			}
 		}
@@ -99,5 +104,8 @@ class BootStrap {
 
 		def workouts = Workout.getAll()
 		workouts.each { it.addToExercises( Exercise.get(1)) }
+		
+		def food = Food.build()
+		println "food from build-test-data is " + food
 	}
 }
