@@ -14,13 +14,9 @@ grails.project.dependency.resolution = {
     log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
 	
-	//def spockVersion = "0.6"
+
 	def spockVersion = "0.7"
-	//def gebVersion = "0.6.1"
-	//def gebVersion = "0.6.3"
-	//def gebVersion = "0.7.2"
 	def gebVersion = "0.9.0-RC-1"
-	//def seleniumVersion = "2.0rc3"
 	def seleniumVersion = "2.26.0"
 
     repositories {
@@ -50,9 +46,6 @@ grails.project.dependency.resolution = {
 
 		test "org.gebish:geb-spock:$gebVersion"
 		
-		
-		//test "org.codehaus.geb:geb-junit4:$gebVersion"
-		//test "org.gebish:geb-junit4:0.7.2"
 		test "org.gebish:geb-junit4:$gebVersion"
 		test "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
 		test "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
