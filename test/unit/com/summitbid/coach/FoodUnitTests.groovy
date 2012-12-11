@@ -1,6 +1,7 @@
 package com.summitbid.coach
 
 
+import grails.buildtestdata.mixin.Build
 
 import grails.test.mixin.*
 import org.junit.*
@@ -8,15 +9,20 @@ import org.junit.*
 /**
  * See the API for {@link grails.test.mixin.domain.DomainUnitTestMixin} for usage instructions
  */
+@Build(Food)
 @TestFor(Food)
 class FoodUnitTests {
 	
-	
+	void testBuildTestData() {
+		def food = Food.build()
+		println "food is:" +  food
+	}
 
     void testConstraints() {
 		println "testConstraints enter"
 		
-		def existingFood = new Food(name:"pizza", description: "good", nutritionData:new NutritionData())
+		//def existingFood = new Food(name:"pizza", description: "good", nutritionData:new NutritionData())
+		def existingFood = Food.build(name:"pizza", description: "good", nutritionData: NutritionData.build())
 		
 		assert existingFood.validate()
 		mockForConstraintsTests(NutritionData, [existingFood.nutritionData])
@@ -35,6 +41,7 @@ class FoodUnitTests {
 		println "testConstraintsFood enter"
 		println "This will test that the food requires a name field that is missing"
 		def food = new Food()
+
 		assert !food.validate()
 		println "ERRORS START : " + food.errors["name"] + " : ERRORS END"
 		//now show which of the constraints was violated
@@ -47,6 +54,7 @@ class FoodUnitTests {
 	void testConstraintsFoodNoNutritionData() {
 		println "testConstraintsFoodNutritionData enter"
 		def existingFood = new Food(name:"pizza", description: "good")
+
 		assert existingFood
 		assert !existingFood.validate()
 		println "testConstraintsFoodNutritionData exit"

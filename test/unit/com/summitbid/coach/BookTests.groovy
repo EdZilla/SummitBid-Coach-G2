@@ -1,16 +1,22 @@
 package com.summitbid.coach
 
 
-
+import grails.buildtestdata.mixin.Build
 import grails.test.mixin.*
 import org.junit.*
 
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
  */
+@Build(Book)
 @TestFor(Book)
 class BookTests {
 
+	void testBuildTestData() {
+		def book = Book.build()
+		println "book is:" +  book
+	}
+	
     void testConstraints() {
 
 		def existingBook = new Book( title: "Misery", author: "Stephen King")
