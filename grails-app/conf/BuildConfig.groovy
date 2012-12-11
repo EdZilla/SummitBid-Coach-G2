@@ -37,7 +37,7 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
 		
-		// According to Marcin Erdmann, geb release candidate versions are only avialable from sonatype snapshot repo
+		// According to Marcin Erdmann, geb release candidate versions are only available from sonatype snapshot repo
 		mavenRepo "https://oss.sonatype.org/content/repositories/snapshots/"
     }
     dependencies {
@@ -55,8 +55,6 @@ grails.project.dependency.resolution = {
 		test "org.codehaus.geb:geb-junit4:0.7.2"
 		test "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
 		test "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
-		//test 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.0rc3'		
-		
     }
 
     plugins {
@@ -69,7 +67,10 @@ grails.project.dependency.resolution = {
 		compile ":geb:$gebVersion"
 		compile ":database-migration:1.0"
 		compile ":easyb:2.0.5"
+		
 		compile ":fixtures:1.2"
+		compile ":build-test-data:2.0.3"
+		
 		compile ":shiro:1.1.4"
 		compile ":navigation:1.3.2"
 		compile ":jquery-ui:1.8.15"
