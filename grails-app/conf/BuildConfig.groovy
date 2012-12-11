@@ -52,7 +52,8 @@ grails.project.dependency.resolution = {
 		
 		
 		//test "org.codehaus.geb:geb-junit4:$gebVersion"
-		test "org.codehaus.geb:geb-junit4:0.7.2"
+		//test "org.gebish:geb-junit4:0.7.2"
+		test "org.gebish:geb-junit4:$gebVersion"
 		test "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
 		test "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
     }
