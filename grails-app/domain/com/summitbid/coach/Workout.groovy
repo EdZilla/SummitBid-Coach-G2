@@ -6,16 +6,22 @@ package com.summitbid.coach
  * @author eyoung2297k
  *
  */
-class Workout {
+class Workout extends BaseDomain{
 	
-	String name
+	//String name
 	String description
-	//Date date
-	
-	static hasMany = [ exercises : Activity ]
+	//Date date	
+
+	//static hasMany = [ exercises : Activity ]
+	static hasMany = [ exercises : Exercise ]
 	
     static constraints = {
 		name(nullable:false)
 		description(blank: true, nullable:true)
     }
+	
+	String toString() {
+		"Workout: ${this.name} \n" +
+		"description: ${this.description} \n"
+	}
 }

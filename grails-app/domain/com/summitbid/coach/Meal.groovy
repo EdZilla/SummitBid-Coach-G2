@@ -18,8 +18,11 @@ class Meal extends BaseDomain {
     }
 	
 	
-	String toString(){"Meal \n" +
+	String toString(){
+		"Meal \n" +
 		" name: ${this.name}, \n" +
 		" date: ${this.date}, \n" +
-		" desc: ${this.description}"}
+		" desc: ${this.description}, \n" +
+		" foods: ${this.foods}"
+	}
 }

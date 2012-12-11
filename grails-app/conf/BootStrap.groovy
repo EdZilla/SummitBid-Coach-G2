@@ -1,5 +1,10 @@
 import org.apache.shiro.crypto.hash.Sha256Hash
 import com.summitbid.coach.Food
+import com.summitbid.coach.Exercise
+import com.summitbid.coach.Meal
+import com.summitbid.coach.Workout
+import com.summitbid.coach.Activity
+
 import grails.converters.JSON
 
 class BootStrap {
@@ -42,7 +47,27 @@ class BootStrap {
 				println myFood
 			}
 			println "Bootstrapped foods: " + Food.list()
+			
+			5.times {  def myMeal = new Meal(name:"meal-" + it, date: new Date()).validateAndSave()  }
+			
+			def meals = Meal.getAll()
+			meals.each { it.addToFoods(Food.get(1)) }
+			println "Bootstrapped Meals: " + Meal.list()
 
+			
+			10.times {
+				def myExercise = new Exercise(name:"ex-" + it, description:"do it!")
+				myExercise.save()
+			}
+			println "Bootstrapped Exercises: " + Exercise.list()
+
+			5.times  {
+				def myWorkouts = new Workout(name:"Monday Wkout", date: new Date() ).validateAndSave()
+			}
+						
+			def workouts = Workout.getAll()
+			workouts.each { it.addToExercises( Exercise.get(1)) }
+				
 			def admin = ShiroUser.findByUsername('admin')
 				
 				if (!admin) {
