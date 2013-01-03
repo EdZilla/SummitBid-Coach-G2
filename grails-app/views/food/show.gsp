@@ -136,14 +136,15 @@
 	  				$('#food').load(this.href); return false;
   			});
   			</r:script>
-  			
-  					<g:select from ="getFoods" controller="food" elementId="foodLink">List the foods</g:link>
-  			<div id="food"></div>
-  			<r:script> 
-  				$('#foodLink').click(function() {
-	  				$('#food').load(this.href); return false;
-  			});
-  			</r:script>
+  	
+  	
+<%--  					<g:select from ="getFoods" controller="food" elementId="foodLink">List the foods</g:link>--%>
+<%--  			<div id="food"></div>--%>
+<%--  			<r:script> --%>
+<%--  				$('#foodLink').click(function() {--%>
+<%--	  				$('#food').load(this.href); return false;--%>
+<%--  			});--%>
+<%--  			</r:script>--%>
 
 <r:layoutResources />
 </body>
