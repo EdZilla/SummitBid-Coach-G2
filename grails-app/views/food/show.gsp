@@ -14,7 +14,7 @@
 <jq:plugin name="cc_validation" />
 
 
-<script type="text/javascript">                                         
+		<script type="text/javascript">                                         
    			
    			 $(document).ready(function() {
    				$("#click_me_link").click(function() {
@@ -28,8 +28,6 @@
    				});
  			});                                  
  		</script>
-
-
 
 
 </head>
@@ -121,6 +119,32 @@
 			fatsecret.setContainer("my_container");
 			fatsecret.setCanvas("home");
 		</script>
+		
+
+			<g:link action ="showTime" controller="meal" elementId="timeLink">Show the Time!</g:link>
+  			<div id="time"></div>
+  			<r:script> 
+  				$('#timeLink').click(function() {
+	  				$('#time').load(this.href); return false;
+  			});
+  			</r:script>
+  			
+  				<g:link action ="getFoods" controller="food" elementId="foodLink">List the foods</g:link>
+  			<div id="food"></div>
+  			<r:script> 
+  				$('#foodLink').click(function() {
+	  				$('#food').load(this.href); return false;
+  			});
+  			</r:script>
+  			
+  					<g:select from ="getFoods" controller="food" elementId="foodLink">List the foods</g:link>
+  			<div id="food"></div>
+  			<r:script> 
+  				$('#foodLink').click(function() {
+	  				$('#food').load(this.href); return false;
+  			});
+  			</r:script>
+
 <r:layoutResources />
 </body>
 </html>

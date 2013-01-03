@@ -18,7 +18,8 @@ class Food extends BaseDomain {
 	
 	String toString()
 	{
-		return "Food: ${name}, ${description}, nutrition: ${nutritionData}"
+		//return "Food: ${name}, ${description}, nutrition: ${nutritionData}"
+		return "Food: ${name}"
 	}
 
 	/**

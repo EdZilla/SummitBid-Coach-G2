@@ -7,4 +7,6 @@ class ExerciseController {
 	
     static scaffold = true
 	
+	 
+	
 }

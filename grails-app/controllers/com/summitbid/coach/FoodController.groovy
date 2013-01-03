@@ -27,7 +27,42 @@ class FoodController {
 		
 		redirect(action: "list", params: params)
     }
-
+	
+	def getFoods() {
+		def foodList = Food.getAll();
+		log.debug "foodList count: " + foodList.size()
+		log.debug "foodlist: $foodList"
+		def foods = [:]
+		log.debug "foods size: " + foods.size()
+		
+		
+		//for (f in foodList)
+		foodList.each
+		{ f-> 
+			//log.debug "food: " + f?.name " : " +  foods?.size()
+			if (f.name == null)
+				log.warn "got a null element. "
+			else {
+				foods.put(f.id, f?.name)
+				//foods.put("name","wtf")
+				//log.debug "wtf"
+			}		
+		}
+		//log.debug("foods: " + foods + " : " +  foods.size())
+		log.debug "foods size: " + foods.size()
+		render foods 	
+	}
+	
+	def getFoodsNames() {
+		def q = Food.createCriteria()
+		
+		def foods = q.list {
+			
+		}
+		
+		render foods
+	}
+	
     def list() {
 		log.trace "Executing action: '$actionName' "
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
