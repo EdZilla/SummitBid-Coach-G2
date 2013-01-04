@@ -8,9 +8,9 @@ import com.summitbid.coach.Equipment
 
 import grails.converters.JSON
 
-import grails.buildtestdata.mixin.Build
+//import grails.buildtestdata.mixin.Build
 
-@Build(Food)
+//@Build(Food)
 class BootStrap {
 
 	def init = { servletContext ->
@@ -78,34 +78,34 @@ class BootStrap {
 	def bootStrappedDomains() {
 		println "bootStrappedDomains: "
 		def myFood
-		100.times {
+		10.times {
 			//println it
 			myFood = Food.foodFactory("bagel-${it}", "einsteins")
 			println myFood
 		}
 		println "Bootstrapped foods: " + Food.list()
 
-		50.times {  def myMeal = new Meal(name:"meal-" + it, date: new Date()).validateAndSave()  }
+		5.times {  def myMeal = new Meal(name:"meal-" + it, date: new Date()).validateAndSave()  }
 
 		def meals = Meal.getAll()
 		meals.each { it.addToFoods(Food.get(1)) }
 		println "Bootstrapped Meals: " + Meal.list()
 
 
-		100.times {
+		10.times {
 			def myExercise = new Exercise(name:"ex-" + it, description:"do it!")
 			myExercise.save()
 		}
 		println "Bootstrapped Exercises: " + Exercise.list()
 
-		50.times  {
+		5.times  {
 			def myWorkouts = new Workout(name:"Monday Wkout", date: new Date() ).validateAndSave()
 		}
 
 		def workouts = Workout.getAll()
 		workouts.each { it.addToExercises( Exercise.get(1)) }
 		
-		def food = Food.build()
-		println "food from build-test-data is " + food
+		//def food = Food.build()
+		//println "food from build-test-data is " + food
 	}
 }

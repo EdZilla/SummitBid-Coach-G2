@@ -25,3 +25,20 @@ grails test-app functional: -baseUrl=http://coach.cloudfoundry.com/
 http://coach.summitbid.com/
 http://coach.cloudfoundry.com/dbconsole/login.jsp?jsessionid=3d3bef19393f2a14370cc5ab908cb31b
 
+Cloudfoundry notes: 
+Often I can't do an update with
+grails prod cf-update
+
+When that happens I need to delete the app and the service and then re-push with
+grails prod cf-push
+
+The typical error is: 
+I/O error: Connection reset; nested exception is java.net.SocketException: Connection reset
+
+Unable to use 
+//import grails.buildtestdata.mixin.Build in Bootstrap because it fails on cloudfoundry
+java.lang.NoClassDefFoundError: grails/test/mixin/domain/DomainClassUnitTestMixin
+2013-01-04 02:53:29,023 [main] ERROR context.ContextLoader  - Context initialization failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is java.lang.RuntimeException: Unable to locate constructor with Class parameter for class org.codehaus.groovy.grails.commons.DefaultGrailsBootstrapClass
+
