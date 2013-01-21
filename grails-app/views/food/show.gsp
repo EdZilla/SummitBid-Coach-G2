@@ -105,12 +105,16 @@
 					<g:message code="default.button.edit.label" default="Edit" />
 				</g:link>
 				<g:link controller="meal" elementId="click_me_link_elementId" class="edit" action="edit">Add this food to current meal</g:link>
-
-				<a href="" id="click_me_link">Link using jquery</a> 
+				
+				<a href="" id="click_me_link">Link using jquery</a>
+				
+				<span> | </span>
+        				<g:link controller="meal" params="["food.id":food?.id]" action="addFoodTo" >Add this food item to current meal orig</g:link> 
 				
 				<g:actionSubmit class="delete" action="delete"
 					value="${message(code: 'default.button.delete.label', default: 'Delete')}"
 					onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+					
 			</fieldset>
 		</g:form>
 	</div>

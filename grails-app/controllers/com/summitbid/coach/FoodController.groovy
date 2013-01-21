@@ -100,13 +100,14 @@ class FoodController {
     def show() {
 		log.trace "Executing action: '$actionName'"
         def foodInstance = Food.get(params.id)
+		flash.currentFood = foodInstance;
 		
         if (!foodInstance) {
 			flash.message = message(code: 'default.not.found.message', args: [message(code: 'food.label', default: 'Food'), params.id])
             redirect(action: "list")
             return
         }
-
+		
         [foodInstance: foodInstance]
     }
 	

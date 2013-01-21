@@ -29,7 +29,16 @@ Cloudfoundry notes:
 Often I can't do an update with
 grails prod cf-update
 
-When that happens I need to delete the app and the service and then re-push with
+When that happens I need to delete the app, (but don't delete the mysql DB!)
+
+Example: 
+grails cf-delete-app coach
+Application 'coach' uses 'mysql-8234712' service, would you like to delete it?[y,n] N
+
+Do not delete the mysql db!!
+Do bind to the mysql instance. 
+
+ then re-push with
 grails prod cf-push
 
 The typical error is: 
