@@ -25,6 +25,10 @@ Now going to try openshift.
 
 Change to test ssh
 
+Clone using git protocol instead of https
+
+
+
 http://coach.summitbid.com/
 http://coach.cloudfoundry.com/dbconsole/login.jsp?jsessionid=3d3bef19393f2a14370cc5ab908cb31b
 
