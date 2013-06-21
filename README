@@ -23,6 +23,8 @@ grails test-app functional: -baseUrl=http://coach.cloudfoundry.com/
 Used to be in cloudfoundry till the cut me off. 
 Now going to try openshift. 
 
+Change to test ssh
+
 http://coach.summitbid.com/
 http://coach.cloudfoundry.com/dbconsole/login.jsp?jsessionid=3d3bef19393f2a14370cc5ab908cb31b
 
