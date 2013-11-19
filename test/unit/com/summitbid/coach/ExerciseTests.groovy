@@ -1,15 +1,12 @@
 package com.summitbid.coach
 
-
-
 import grails.test.mixin.*
 import org.junit.*
 import java.util.Random
 
-
 import groovyx.net.http.HttpResponseException
 import groovyx.net.http.RESTClient
-import net.sf.json.JSON
+//import net.sf.json.JSON
 //import spock.lang.Specification
 //import spock.lang.Ignore
 
@@ -40,10 +37,10 @@ class ExerciseTests {
 	 * 
 	 */
 	void testExercisesGet() {
-
-		client = new RESTClient(baseUri)
-		def signatureBaseString = createSignatureBaseString()
-		println "sig base: ${signatureBaseString}"
+	        println "baseUri: ${baseUri}"
+				client = new RESTClient(baseUri)
+		//		def signatureBaseString = createSignatureBaseString()
+		//		println "sig base: ${signatureBaseString}"
 
 
 		//		try {

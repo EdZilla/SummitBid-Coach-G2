@@ -52,7 +52,8 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        compile ":hibernate:$grailsVersion"
+        //compile ":hibernate:$grailsVersion"
+		runtime ":hibernate:$grailsVersion"
         build ":tomcat:$grailsVersion"
 
 		runtime ":jquery:1.8.3"
@@ -69,8 +70,8 @@ grails.project.dependency.resolution = {
 		compile ":shiro:1.1.4"
 		compile ":navigation:1.3.2"
 		
-		compile ":cloud-foundry:1.2.3"
-		compile ':cloud-foundry-ui:1.1'
+		//compile ":cloud-foundry:1.2.3"
+		//compile ':cloud-foundry-ui:1.1'
 		compile ":google-visualization:0.6"
 		
 		// experimental

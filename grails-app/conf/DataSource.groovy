@@ -22,8 +22,8 @@ environments {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             //url = "jdbc:h2:mem:/opt/data/db/coachg2/devDb"
-			//url = "jdbc:h2:mem:/opt/data/db/coachg2/devDb"
-			url = "jdbc:mysql://localhost:3306/coachg2?autoReconnect=true"
+			url = "jdbc:h2:mem:/opt/data/db/coachg2/devDb"
+			//url = "jdbc:mysql://localhost:3306/coachg2?autoReconnect=true"
 			
         }
     }
@@ -35,10 +35,11 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "update"
-			//dbCreate = "create-drop"
+            //dbCreate = "update"
+			dbCreate = "create-drop"
             //url = "jdbc:h2:/opt/data/db/coachg2/prodDb"
-			url = "jdbc:mysql://localhost:3306/coachg2?autoReconnect=true&useUnicode=true&characterEncoding=utf8"
+			url = "jdbc:h2:/opt/data/db/coach/prodDb"
+			//url = "jdbc:mysql://localhost:3306/coachg2?autoReconnect=true&useUnicode=true&characterEncoding=utf8"
         }
     }
 }

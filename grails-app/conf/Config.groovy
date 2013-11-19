@@ -96,7 +96,9 @@ log4j = {
 	
 		appenders {
 			//file name: 'file', file: '/opt/data/logs/coachg2/coachg2.log'
+			file name: 'file', file: '/var/lib/tomcat7/logs/coachg2.log'
 			//file name: 'stacktrace', file: '/opt/data/logs/coachg2/coachg2stacktrace.log'
+			file name: 'stacktrace', file: '/var/lib/tomcat7/logs/coachg2stacktrace.log'
 		}
 
 		root   {
