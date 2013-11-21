@@ -16,7 +16,8 @@ grails.project.dependency.resolution = {
 	
 
 	def spockVersion = "0.7"
-	def gebVersion = "0.9.0-RC-1"
+	//def gebVersion = "0.9.0-RC-1"
+	def gebVersion = "0.9.2"
 	def seleniumVersion = "2.26.0"
 
     repositories {
