@@ -36,15 +36,16 @@ environments {
     production {
         dataSource {
             //dbCreate = "update"
+			dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'			
 			dbCreate = "create-drop"
             //url = "jdbc:h2:mem:/opt/data/db/coachg2/prodDb"
-			url = "jdbc:h2:mem:prodDb"
+			//url = "jdbc:h2:mem:prodDb"
 			//url = "jdbc:mysql://localhost:3306/coachg2?autoReconnect=true&useUnicode=true&characterEncoding=utf8"
 			
 //			dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'
-//			pooled = false
+			pooled = false
 //
-//			jndiName = 'java:comp/env/jdbc/coach'
+			jndiName = 'java:comp/env/jdbc/coach'
         }
     }
 }
