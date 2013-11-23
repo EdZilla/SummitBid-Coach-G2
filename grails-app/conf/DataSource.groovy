@@ -36,6 +36,8 @@ environments {
     production {
         dataSource {
             //dbCreate = "update"
+			username = 'coach'
+			password = 'coach'
 			dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'			
 			dbCreate = "create-drop"
 			pooled = false
