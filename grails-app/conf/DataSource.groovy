@@ -5,16 +5,16 @@ dataSource {
 //    password = ""
 	
 	pooled = true
-	driverClassName = "com.mysql.jdbc.Driver"
-	  username = "coach"
-	  password = "gr00vy"
-	  intialSize = 10
-	  maxActive = 100
+	driverClassName = 'org.h2.Driver'
+	username = 'sa'
+	password = ''
 }
 hibernate {
-    cache.use_second_level_cache = true
-    cache.use_query_cache = true
-    cache.provider_class = 'net.sf.ehcache.hibernate.EhCacheProvider'
+  cache.use_second_level_cache = true
+	cache.use_query_cache = false
+	cache.region.factory_class = 'net.sf.ehcache.hibernate.EhCacheRegionFactory'
+	format_sql = true
+	use_sql_comments = true
 }
 // environment specific settings
 environments {
@@ -38,13 +38,7 @@ environments {
             //dbCreate = "update"
 			dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'			
 			dbCreate = "create-drop"
-            //url = "jdbc:h2:mem:/opt/data/db/coachg2/prodDb"
-			//url = "jdbc:h2:mem:prodDb"
-			//url = "jdbc:mysql://localhost:3306/coachg2?autoReconnect=true&useUnicode=true&characterEncoding=utf8"
-			
-//			dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'
 			pooled = false
-//
 			jndiName = 'java:comp/env/jdbc/coach'
         }
     }
