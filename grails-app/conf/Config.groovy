@@ -1,3 +1,6 @@
+import org.apache.log4j.ConsoleAppender
+import org.apache.log4j.PatternLayout
+
 // locations to search for config files that get merged into the main config
 // config files can either be Java properties files or ConfigSlurper scripts
 
@@ -93,7 +96,8 @@ log4j = {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
 	
-	
+		def logLayoutPattern = new PatternLayout("%d [%t] %-5p %c %x - %m%n")
+		
 		appenders {
 			//file name: 'file', file: '/opt/data/logs/coachg2/coachg2.log'
 			//file name: 'file', file: '/var/lib/tomcat7/logs/coachg2.log'
@@ -101,6 +105,8 @@ log4j = {
 			//file name: 'stacktrace', file: '/opt/data/logs/coachg2/coachg2stacktrace.log'
 			//file name: 'stacktrace', file: '/var/lib/tomcat7/logs/coachg2stacktrace.log'
 			//file name: 'stacktrace', file: 'coachg2stacktrace.log'
+			new ConsoleAppender(name: "console",
+				layout: logLayoutPattern)
 		}
 
 		root   {
