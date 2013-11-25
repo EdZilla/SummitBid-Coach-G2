@@ -6,6 +6,7 @@ dataSource {
 	
 	pooled = true
 	driverClassName = 'org.h2.Driver'
+	jndiName = 'java:comp/env/jdbc/coach'
 	
 }
 hibernate {
@@ -28,7 +29,7 @@ environments {
 			
 			//url = "jdbc:mysql://localhost:3306/coach?autoReconnect=true"
 			//jndiName = 'java:comp/env/jdbc/coachDBDataSource'						
-			jndiName = 'java:comp/env/jdbc/coachDBDataSource'
+			
         }
     }
     test {
@@ -45,7 +46,7 @@ environments {
 			dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'			
 			dbCreate = "create-drop"
 			//jndiName = 'java:comp/env/jdbc/coachDBDataSource'
-			jndiName = 'java:comp/env/jdbc/coachDBDataSource'
+			//jndiName = 'java:comp/env/jdbc/coachDBDataSource'
         }
     }
 }
