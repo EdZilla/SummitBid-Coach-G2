@@ -27,7 +27,8 @@ environments {
 			//url = "jdbc:h2:mem:/opt/data/db/coachg2/devDb"
 			
 			//url = "jdbc:mysql://localhost:3306/coach?autoReconnect=true"
-			jndiName = 'java:comp/env/jdbc/coachDBDataSource'						
+			//jndiName = 'java:comp/env/jdbc/coachDBDataSource'						
+			jndiName = 'java:comp/env/jdbc/coach'
         }
     }
     test {
@@ -43,7 +44,8 @@ environments {
 			driverClassName = "com.mysql.jdbc.Driver"
 			dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'			
 			dbCreate = "create-drop"
-			jndiName = 'java:comp/env/jdbc/coachDBDataSource'
+			//jndiName = 'java:comp/env/jdbc/coachDBDataSource'
+			jndiName = 'java:comp/env/jdbc/coach'
         }
     }
 }
