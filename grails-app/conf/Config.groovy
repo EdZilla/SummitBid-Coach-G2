@@ -69,7 +69,7 @@ grails.gorm.default.constraints = {
 }
 
 // tomcat plugin JNDI config for localhost development
-grails.naming.entries = ['jdbc/coach': [
+grails.naming.entries = ['jdbc/coachDBDataSource': [
 	type: "javax.sql.DataSource", //required
 		auth: "Container", // optional
 		description: "Data source for Coach...", //optional
