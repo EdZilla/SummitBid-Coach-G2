@@ -6,7 +6,7 @@ dataSource {
 	
 	pooled = true
 	driverClassName = 'org.h2.Driver'
-	jndiName = 'java:comp/env/jdbc/coach'
+	jndiName = 'java:comp/env/jdbc/coachDBDataSource'
 	
 }
 hibernate {
