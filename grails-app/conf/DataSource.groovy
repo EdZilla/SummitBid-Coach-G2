@@ -44,7 +44,7 @@ environments {
 			pooled = false
 			driverClassName = "com.mysql.jdbc.Driver"
 			dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'			
-			dbCreate = "create-drop"
+			dbCreate = "update"
 			//jndiName = 'java:comp/env/jdbc/coachDBDataSource'
 			//jndiName = 'java:comp/env/jdbc/coachDBDataSource'
         }
