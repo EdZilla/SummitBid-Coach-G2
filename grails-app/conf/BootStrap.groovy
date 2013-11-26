@@ -24,9 +24,9 @@ class BootStrap {
 				println "BOOTSTRAP: environment PRODUCTION"
 				def admin = ShiroUser.findByUsername('admin')
 
-				println """MySQL url: jdbc:mysql://$service.credentials.hostname:$service.credentials.port:$service.credentials.name
-						   user: $service.credentials.user
-						   password: $service.credentials.password"""
+//				println """MySQL url: jdbc:mysql://$service.credentials.hostname:$service.credentials.port:$service.credentials.name
+//						   user: $service.credentials.user
+//						   password: $service.credentials.password"""
 
 
 				if (!admin) {
