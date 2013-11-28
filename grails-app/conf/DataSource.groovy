@@ -4,9 +4,6 @@ dataSource {
 //    username = "sa"
 //    password = ""
 	
-	pooled = true
-	driverClassName = 'org.h2.Driver'
-	jndiName = 'java:comp/env/jdbc/coachDBDataSource'
 	
 }
 hibernate {
@@ -20,6 +17,7 @@ hibernate {
 environments {
     development {
         dataSource {
+			jndiName = 'java:comp/env/jdbc/coachDBDataSource'
 			pooled = false			
 			driverClassName = "com.mysql.jdbc.Driver"			
 			dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'
@@ -34,17 +32,35 @@ environments {
     }
     test {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:h2:mem:testDb"
+			
+			pooled = false; //it is recommended not to use connection pool unless file encryption is enabled
+			username = "coach"
+			password = "coach"
+			dbCreate = "create-drop"
+			
+			driverClassName = "com.mysql.jdbc.Driver"
+			dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'            
+
+//			jndiName = 'java:comp/env/jdbc/coachDBDataSource'
+			url = "jdbc:mysql://localhost:3306/coach?autoReconnect=true"
+			
+//			
+
+		    //driverClassName = "org.h2.Driver"
+			//username = "sa"
+			//password = ""
+			//url = "jdbc:h2:mem:testDb"
         }
     }
     production {
         dataSource {
             //dbCreate = "update"
 			pooled = false
+			dbCreate = "update"			
 			driverClassName = "com.mysql.jdbc.Driver"
-			dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'			
-			dbCreate = "update"
+			dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'
+			jndiName = 'java:comp/env/jdbc/coachDBDataSource'
+			
 			//jndiName = 'java:comp/env/jdbc/coachDBDataSource'
 			//jndiName = 'java:comp/env/jdbc/coachDBDataSource'
         }

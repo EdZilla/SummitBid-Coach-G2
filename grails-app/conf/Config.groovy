@@ -93,6 +93,9 @@ environments {
     }
 	test {
 		println "Environment is TEST"
+		//grails.dbconsole.enabled = true
+		//grails.logging.jul.usebridge = false
+		 
 	}
     production {
 		println "Environment is PRODUCTION"

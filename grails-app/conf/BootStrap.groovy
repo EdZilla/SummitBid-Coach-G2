@@ -61,6 +61,7 @@ class BootStrap {
 				println "BOOTSTRAP environment: TEST"
 
 				bootStrappedDomains()
+				
 			}
 		}
 	}
