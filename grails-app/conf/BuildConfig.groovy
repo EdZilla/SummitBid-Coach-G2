@@ -78,13 +78,11 @@ grails.project.dependency.resolution = {
 		compile ":shiro:1.1.4"
 		compile ":navigation:1.3.2"
 		
-		//compile ":cloud-foundry:1.2.3"
-		//compile ':cloud-foundry-ui:1.1'
 		compile ":google-visualization:0.6"
 		
 		// experimental
 		//runtime 'com.datomic:datomic-free:0.8.3551'
 		
-		// compile ":mongodb:1.3.0"
+		compile ":mongodb:1.3.3"
     }
 }
