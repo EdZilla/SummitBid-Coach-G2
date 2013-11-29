@@ -45,6 +45,8 @@ grails.project.dependency.resolution = {
 		// Maybe we should use rest-client-builder?
 		test "org.codehaus.groovy.modules.http-builder:http-builder:0.6"
 
+		test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
+		
 		test "org.gebish:geb-spock:$gebVersion"
 		
 		test "org.gebish:geb-junit4:$gebVersion"
@@ -61,6 +63,11 @@ grails.project.dependency.resolution = {
 		runtime ":resources:1.1.6"
 		compile ":jquery-ui:1.8.24"
 		compile ":spock:$spockVersion"
+		
+		test(":spock:$spockVersion") {
+			exclude "spock-grails-support"
+		}		
+		
 		compile ":geb:$gebVersion"
 		compile ":database-migration:1.2.2"
 		compile ":easyb:2.0.5"

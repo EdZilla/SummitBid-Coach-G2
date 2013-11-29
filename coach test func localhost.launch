@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.grails.ide.eclipse.core.launchconfig">
-<stringAttribute key="bad_container_name" value="/coachlaunches"/>
 <booleanAttribute key="org.eclipse.debug.core.appendEnvironmentVariables" value="true"/>
 <mapAttribute key="org.eclipse.debug.core.environmentVariables">
 <mapEntry key="GRAILS_STS_RUNNING" value="true"/>
@@ -14,8 +13,8 @@
 <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.codehaus.groovy.grails.cli.support.GrailsStarter"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="coach"/>
-<stringAttribute key="org.grails.ide.eclipse.core.ORG_SCRIPT" value=""/>
+<stringAttribute key="org.grails.ide.eclipse.core.ORG_SCRIPT" value="run-app"/>
 <stringAttribute key="org.grails.ide.eclipse.core.PROJECT_DIR" value="/Users/eyoung2297k/development/src/SummitBid-Coach-G2"/>
-<stringAttribute key="org.grails.ide.eclipse.core.SCRIPT" value="test-app --stacktrace --verbose"/>
+<stringAttribute key="org.grails.ide.eclipse.core.SCRIPT" value="test-app functional:"/>
 <stringAttribute key="process_factory_id" value="org.grails.ide.eclipse.core.processFactory"/>
 </launchConfiguration>
