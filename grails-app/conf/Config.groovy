@@ -80,8 +80,8 @@ grails.naming.entries = ['jdbc/coachDBDataSource': [
 	password: "coach",
 	driverClassName: "com.mysql.jdbc.Driver",
 	maxActive: "100", //and so on
-		maxIdle: "4"
-	]
+	maxIdle: "4"
+   ]
 ]
 
 // set per-environment serverURL stem for creating absolute links
@@ -102,8 +102,7 @@ environments {
 		grails.dbconsole.enabled = true
         grails.logging.jul.usebridge = false
         //grails.serverURL = "http://www.changeme.com"
-		//grails.serverURL = "http://coach.summitbid.com"
-		
+		//grails.serverURL = "http://coach.summitbid.com"		
     }
 }
 
