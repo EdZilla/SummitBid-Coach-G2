@@ -83,6 +83,6 @@ grails.project.dependency.resolution = {
 		// experimental
 		//runtime 'com.datomic:datomic-free:0.8.3551'
 		
-		compile ":mongodb:1.3.3"
+		//compile ":mongodb:1.3.3"
     }
 }
