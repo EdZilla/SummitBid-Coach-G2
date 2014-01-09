@@ -1,10 +1,28 @@
-grails.servlet.version = "2.5" // Change depending on target container compliance (2.5 or 3.0)
+grails.servlet.version = "3.0" // Change depending on target container compliance (2.5 or 3.0)
 grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
+grails.project.work.dir = "target/work"
+grails.project.target.level = 1.6
+grails.project.source.level = 1.6
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 grails.project.war.file = "target/coach.war"
 
+grails.project.fork = [
+    // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
+    //  compile: [maxMemory: 256, minMemory: 64, debug: false, maxPerm: 256, daemon:true],
+
+    // configure settings for the test-app JVM, uses the daemon by default
+    test: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, daemon:true],
+    // configure settings for the run-app JVM
+    run: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, forkReserve:false],
+    // configure settings for the run-war JVM
+    war: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, forkReserve:false],
+    // configure settings for the Console UI JVM
+    console: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256]
+]
+
+grails.project.dependency.resolver = "maven" // or ivy
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
@@ -13,7 +31,7 @@ grails.project.dependency.resolution = {
     }
     log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
-	
+    legacyResolve false 
 
 	def spockVersion = "0.7"
 	//def gebVersion = "0.9.0-RC-1"
@@ -55,31 +73,31 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
+    	
+    	compile ":scaffolding:2.0.1"
+        compile ':cache:1.1.1'
+        
         //compile ":hibernate:$grailsVersion"
 		//runtime ":hibernate:$grailsVersion"
         //build ":tomcat:$grailsVersion"
 
 		// plugins for the build system only
-		build ":tomcat:7.0.42"
+		build ":tomcat:7.0.47"
 		
 		// plugins needed at runtime but not for compilation
-		runtime ":hibernate:3.6.10.1" // or ":hibernate4:4.1.11.1"
+		runtime ":hibernate:3.6.10.6" // or ":hibernate4:4.1.11.1"
 
 		runtime ":jquery:1.8.3"
 		runtime ":resources:1.1.6"
 		compile ":jquery-ui:1.8.24"
-		compile ":spock:$spockVersion"
 		
-		test(":spock:$spockVersion") {
-			exclude "spock-grails-support"
-		}		
+		test("org.grails.plugins:geb:$gebVersion")
 		
-		compile ":geb:$gebVersion"
-		compile ":database-migration:1.2.2"
+		compile ":database-migration:1.3.8"
 		compile ":easyb:2.0.5"
 		
 		compile ":fixtures:1.2"
-		compile ":build-test-data:2.0.3"
+		compile ":build-test-data:2.0.9"
 		
 		compile ":shiro:1.1.4"
 		compile ":navigation:1.3.2"
