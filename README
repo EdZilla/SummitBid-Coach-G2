@@ -1,12 +1,28 @@
 SummitBid Coach G2
 
+
+
 Tracks diet and exercise.
-Originally grails 2.2.5 was updated in October 2025 just to get it working somewhat. 
+Originally grails 2.2.5 was updated in October 2025 just to get it working somewhat.
 Uses Grails 2.3.11,
 java openjdk version "1.8.0_462" (sdk use java 8.0.462-zulu)
 Updated in October 2025 just to get it running.
 
 This seems to be an experiment to play with Rest APIs for the controllers. Very much a scaffolded application.
+
+# SummitBid Coach (vintage Grails)
+
+## Quick start
+1) Install SDKMAN, then:
+   sdk env              # auto-picks Grails 2.3.11 + Java 8
+2) Run:
+   grails clean
+   grails run-app
+
+## Notes
+- Dev DB: H2 in-memory, dbCreate=update (or create-drop)
+- Shiro plugin 1.2.1
+- Tomcat plugin 7.0.55
 
 
 Uses 'FatSecret' javascript and soon to use 'FatSecret' API
