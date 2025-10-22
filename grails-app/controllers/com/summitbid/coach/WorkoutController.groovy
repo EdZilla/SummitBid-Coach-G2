@@ -7,6 +7,10 @@ class WorkoutController {
 	static navigation = true
 	
     static scaffold = true
+
+	def index() {
+		redirect(action: 'list', params: params)
+	}
 	
 	def list() {
 		log.trace "Executing action: '$actionName' "

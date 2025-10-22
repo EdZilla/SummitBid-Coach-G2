@@ -6,11 +6,9 @@ class UrlMappings {
 				// apply constraints here
 			}
 		}
-		"/"(controller: 'home', action: 'index') // or whatever your landing page is
-                "/$controller/$action?/$id?(.$format)?" { }
 
-                "500"(view: '/error')
-                "404"(view: '/notFound')
+//                "500"(view: '/error')
+//                "404"(view: '/notFound')
 		
 		"/admin/cfDashboard/$action?"(controller: 'cloudFoundryDashboard')
 		"/admin/cfDashboard/application/$appName"(controller: 'cloudFoundryDashboard', action: 'application')

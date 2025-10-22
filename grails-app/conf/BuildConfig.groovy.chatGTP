@@ -34,16 +34,9 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-         // Tomcat plugin version is Tomcat’s, not Grails’
-         build ":tomcat:7.0.55"     // 7.0.54 also works
-
-         // For Grails 2.3.x, prefer hibernate4 plugin
-         runtime ":hibernate4:4.3.6.1"
-
-         // Bring Shiro back so those imports resolve
-         compile ":shiro:1.2.1"
-
-
+        // Keep this minimal until you compile successfully
+        build   ":tomcat:2.3.11"
+        runtime ":hibernate4:4.3.6.1"
 
         // Add back others later AFTER you’ve compiled once.
         // Example known-good options for 2.3.x era:

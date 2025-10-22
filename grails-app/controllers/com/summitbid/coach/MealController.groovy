@@ -5,6 +5,16 @@ import org.springframework.dao.DataIntegrityViolationException
 class MealController {
 	static navigation = true
    static scaffold = true
+
+	def index() {
+		redirect(action: 'list', params: params)
+	}
+
+	def list() {
+		log.trace "Executing action: '$actionName' "
+		params.max = Math.min(params.max ? params.int('max') : 10, 100)
+		[mealInstanceList: Meal.list(params), mealInstanceTotal: Meal.count()]
+	}
    
    def showTime(){
 	   render "The time is: ${new Date()}"
